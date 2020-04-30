@@ -1,0 +1,750 @@
+[
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.880Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/mem/max",
+        "value": 1073741824,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.880Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/mem/committed",
+        "value": 1073741824,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.881Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/mem/used",
+        "value": 72342552,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.881Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/mem/init",
+        "value": 1073741824,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.881Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/mem/max",
+        "value": -1,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.881Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/mem/committed",
+        "value": 71041024,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.881Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/mem/used",
+        "value": 69093544,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.882Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/mem/init",
+        "value": 2555904,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.882Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 251658240,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.882Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 11010048,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.882Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 10926656,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.882Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 2555904,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.883Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": -1,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.883Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 53084160,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.883Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 51647032,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.883Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 0,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.883Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 1073741824,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.884Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 6946816,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.884Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 6520496,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.884Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 0,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.884Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": -1,
+        "poolKind": "heap",
+        "poolName": "G1 Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.884Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 271581184,
+        "poolKind": "heap",
+        "poolName": "G1 Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.884Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 37748736,
+        "poolKind": "heap",
+        "poolName": "G1 Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.885Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 56623104,
+        "poolKind": "heap",
+        "poolName": "G1 Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.885Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": -1,
+        "poolKind": "heap",
+        "poolName": "G1 Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.885Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 4194304,
+        "poolKind": "heap",
+        "poolName": "G1 Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.885Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 4194304,
+        "poolKind": "heap",
+        "poolName": "G1 Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.885Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 0,
+        "poolKind": "heap",
+        "poolName": "G1 Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.885Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 1073741824,
+        "poolKind": "heap",
+        "poolName": "G1 Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.885Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 797966336,
+        "poolKind": "heap",
+        "poolName": "G1 Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.885Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 30399512,
+        "poolKind": "heap",
+        "poolName": "G1 Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.885Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 1017118720,
+        "poolKind": "heap",
+        "poolName": "G1 Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.886Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/capacity",
+        "value": 2734511,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.886Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/used",
+        "value": 2734512,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.886Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/count",
+        "value": 75,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.886Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/capacity",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.886Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/used",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.886Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/count",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.887Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/count",
+        "value": 1,
+        "gcGen": [
+            "young"
+        ],
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.887Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/cpu",
+        "value": 43317625,
+        "gcGen": [
+            "young"
+        ],
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.887Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 1073741832,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.887Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 271581192,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.887Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 37748736,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.888Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 56623112,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.888Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 8,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.888Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 8,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.889Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.889Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 8,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.889Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 1073741832,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.889Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 4194312,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.890Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 4194304,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.890Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 8,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.890Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/count",
+        "value": 0,
+        "gcGen": [
+            "old"
+        ],
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.890Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/cpu",
+        "value": 0,
+        "gcGen": [
+            "old"
+        ],
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.891Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 1073741832,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: space  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.891Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 797966344,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: space  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.891Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 30399512,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: space  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.891Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 1017118728,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: space  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.893Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/heapAlloc/bytes",
+        "value": 30169008
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.957Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jetty/numOpenConnections",
+        "value": 2
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:11:43.881Z",
+        "service": "druid/router",
+        "host": "172.19.0.6:8888",
+        "version": "0.18.0",
+        "metric": "jvm/mem/max",
+        "value": 1073741824,
+        "memKind": "heap"
+    }
+]

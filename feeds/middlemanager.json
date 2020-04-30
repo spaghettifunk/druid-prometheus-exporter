@@ -1,0 +1,1459 @@
+[
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.345Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/committed",
+        "value": 1041235968,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.346Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/used",
+        "value": 51169496,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.346Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/init",
+        "value": 1073741824,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.346Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/max",
+        "value": -1,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.346Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/committed",
+        "value": 63062016,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.347Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/used",
+        "value": 61512464,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.347Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/init",
+        "value": 2555904,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.347Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 251658240,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.347Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 11337728,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.347Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 11165824,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.348Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 2555904,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.348Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": -1,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.349Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 46047232,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.349Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 44792952,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.349Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 0,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.349Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 1073741824,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.349Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 5939200,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.350Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 5671776,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.350Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 0,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.350Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 197132288,
+        "poolKind": "heap",
+        "poolName": "PS Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.351Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 197132288,
+        "poolKind": "heap",
+        "poolName": "PS Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.351Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 26878592,
+        "poolKind": "heap",
+        "poolName": "PS Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.352Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 197132288,
+        "poolKind": "heap",
+        "poolName": "PS Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.352Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 32505856,
+        "poolKind": "heap",
+        "poolName": "PS Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.352Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 32505856,
+        "poolKind": "heap",
+        "poolName": "PS Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.353Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 12795704,
+        "poolKind": "heap",
+        "poolName": "PS Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.353Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 32505856,
+        "poolKind": "heap",
+        "poolName": "PS Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.353Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 811597824,
+        "poolKind": "heap",
+        "poolName": "PS Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.353Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 811597824,
+        "poolKind": "heap",
+        "poolName": "PS Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.353Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 18052408,
+        "poolKind": "heap",
+        "poolName": "PS Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.354Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 811597824,
+        "poolKind": "heap",
+        "poolName": "PS Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.354Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/capacity",
+        "value": 2621780,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.354Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/used",
+        "value": 2621781,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.354Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/count",
+        "value": 43,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.354Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/capacity",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.355Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/used",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.355Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/count",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.355Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/count",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.356Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/cpu",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.356Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 261095424,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.356Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 197132288,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.357Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 26878592,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.357Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.357Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 87031808,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.358Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 32505856,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.358Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 12795704,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.358Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.358Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 87031808,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.359Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 32505856,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.359Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.359Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.359Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/count",
+        "value": 0,
+        "gcGen": [
+            "old"
+        ],
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.359Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/cpu",
+        "value": 0,
+        "gcGen": [
+            "old"
+        ],
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.360Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 811597824,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: old  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.361Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 811597824,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: old  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.361Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 18052408,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: old  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.361Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 811597824,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: old  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:43.362Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/heapAlloc/bytes",
+        "value": 7109096
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.259Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jetty/numOpenConnections",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.308Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/max",
+        "value": 1041235968,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.309Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/committed",
+        "value": 1041235968,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.310Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/used",
+        "value": 84185136,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.310Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/init",
+        "value": 1073741824,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.310Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/max",
+        "value": -1,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.311Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/committed",
+        "value": 65945600,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.311Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/used",
+        "value": 63159928,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.311Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/mem/init",
+        "value": 2555904,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.311Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 251658240,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.312Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 11337728,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.312Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 10300544,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.312Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 2555904,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.312Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": -1,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.312Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 48275456,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.312Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 46904544,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.313Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 0,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.313Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 1073741824,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.313Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 6332416,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.313Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 5959544,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.313Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 0,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.313Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 197132288,
+        "poolKind": "heap",
+        "poolName": "PS Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.313Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 197132288,
+        "poolKind": "heap",
+        "poolName": "PS Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.314Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 53337024,
+        "poolKind": "heap",
+        "poolName": "PS Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.314Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 197132288,
+        "poolKind": "heap",
+        "poolName": "PS Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.314Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 32505856,
+        "poolKind": "heap",
+        "poolName": "PS Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.314Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 32505856,
+        "poolKind": "heap",
+        "poolName": "PS Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.314Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 12795704,
+        "poolKind": "heap",
+        "poolName": "PS Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.314Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 32505856,
+        "poolKind": "heap",
+        "poolName": "PS Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.315Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 811597824,
+        "poolKind": "heap",
+        "poolName": "PS Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.315Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 811597824,
+        "poolKind": "heap",
+        "poolName": "PS Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.315Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 18052408,
+        "poolKind": "heap",
+        "poolName": "PS Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.315Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 811597824,
+        "poolKind": "heap",
+        "poolName": "PS Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.315Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/capacity",
+        "value": 2621780,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.315Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/used",
+        "value": 2621781,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.316Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/count",
+        "value": 43,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.316Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/capacity",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.316Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/used",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.316Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/count",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.316Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/count",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.316Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/cpu",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.316Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 261095424,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.317Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 197132288,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.317Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 53337024,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.317Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.317Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 87031808,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.317Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 32505856,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.317Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 12795704,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.317Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.318Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 87031808,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.318Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 32505856,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.318Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.318Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.318Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/count",
+        "value": 0,
+        "gcGen": [
+            "old"
+        ],
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.318Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/cpu",
+        "value": 0,
+        "gcGen": [
+            "old"
+        ],
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.320Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 811597824,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: old  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.320Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 811597824,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: old  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.322Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 18052408,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: old  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.322Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 811597824,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: old  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.323Z",
+        "service": "druid/middleManager",
+        "host": "172.19.0.7:8091",
+        "version": "0.18.0",
+        "metric": "jvm/heapAlloc/bytes",
+        "value": 23124240
+    }
+]

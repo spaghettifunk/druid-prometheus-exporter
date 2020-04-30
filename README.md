@@ -1,2 +1,3 @@
-# druid-prometheus-exporter
-Apache Druid metrics exported in Prometheus
+# Apache Druid Prometheus Exporter
+
+Inspired by [opstree druid-exporter](https://github.com/opstree/druid-exporter) project.

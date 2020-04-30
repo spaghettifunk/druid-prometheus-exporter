@@ -1,0 +1,1787 @@
+[
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:08:59.672Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/total/capacity",
+        "value": 300000000000,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:08:59.673Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/replication/factor",
+        "value": 2,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:08:59.673Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/historical/count",
+        "value": 1,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:08:59.673Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/size",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:08:59.673Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/failed",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:08:59.673Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:08:59.673Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/dropQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:08:59.673Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "compact/task/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:04.677Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/overShadowed/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:04.881Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/total/capacity",
+        "value": 300000000000,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:04.882Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/replication/factor",
+        "value": 2,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:04.882Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/historical/count",
+        "value": 1,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:04.882Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/size",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:04.882Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/failed",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:04.882Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:04.883Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/dropQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:04.883Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "compact/task/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:09.885Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/overShadowed/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:09.887Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/total/capacity",
+        "value": 300000000000,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:09.887Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/replication/factor",
+        "value": 2,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:09.887Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/historical/count",
+        "value": 1,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:09.887Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/size",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:09.887Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/failed",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:09.888Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:09.888Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/dropQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:09.888Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "compact/task/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:14.890Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/overShadowed/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:14.891Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/total/capacity",
+        "value": 300000000000,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:14.891Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/replication/factor",
+        "value": 2,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:14.891Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/historical/count",
+        "value": 1,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:14.891Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/size",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:14.891Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/failed",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:14.892Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:14.892Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/dropQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:14.892Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "compact/task/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:19.895Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/overShadowed/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:19.896Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/total/capacity",
+        "value": 300000000000,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:19.896Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/replication/factor",
+        "value": 2,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:19.896Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/historical/count",
+        "value": 1,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:19.897Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/size",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:19.897Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/failed",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:19.897Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:19.898Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/dropQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:19.898Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "compact/task/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:24.907Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/overShadowed/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:24.909Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/total/capacity",
+        "value": 300000000000,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:24.910Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/replication/factor",
+        "value": 2,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:24.911Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/historical/count",
+        "value": 1,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:24.911Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/size",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:24.911Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/failed",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:24.911Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:24.911Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/dropQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:24.912Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "compact/task/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:30.056Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/overShadowed/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:30.059Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/total/capacity",
+        "value": 300000000000,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:30.059Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/replication/factor",
+        "value": 2,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:30.059Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/historical/count",
+        "value": 1,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:30.059Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/size",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:30.060Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/failed",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:30.060Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:30.060Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/dropQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:30.061Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "compact/task/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:35.063Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/overShadowed/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:35.063Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/total/capacity",
+        "value": 300000000000,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:35.063Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/replication/factor",
+        "value": 2,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:35.064Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/historical/count",
+        "value": 1,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:35.064Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/size",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:35.064Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/failed",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:35.064Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:35.064Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/dropQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:35.064Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "compact/task/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:40.066Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/overShadowed/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:40.067Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/total/capacity",
+        "value": 300000000000,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:40.068Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/replication/factor",
+        "value": 2,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:40.068Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/historical/count",
+        "value": 1,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:40.068Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/size",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:40.068Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/failed",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:40.068Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:40.069Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/dropQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:40.069Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "compact/task/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:45.072Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/overShadowed/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:45.347Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/total/capacity",
+        "value": 300000000000,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:45.347Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/replication/factor",
+        "value": 2,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:45.347Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/historical/count",
+        "value": 1,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:45.348Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/size",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:45.348Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/failed",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:45.348Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:45.348Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/dropQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:45.348Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "compact/task/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.082Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jetty/numOpenConnections",
+        "value": 60
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.085Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/mem/max",
+        "value": 1073741824,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.085Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/mem/committed",
+        "value": 1073741824,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.085Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/mem/used",
+        "value": 120491544,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.085Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/mem/init",
+        "value": 1073741824,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.085Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/mem/max",
+        "value": -1,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.085Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/mem/committed",
+        "value": 78184448,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.085Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/mem/used",
+        "value": 76187648,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.085Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/mem/init",
+        "value": 2555904,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.085Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 251658240,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.085Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 13697024,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 13643328,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 2555904,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": -1,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 57016320,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 55536024,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 0,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 1073741824,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 7471104,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 7012824,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 0,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": -1,
+        "poolKind": "heap",
+        "poolName": "G1 Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 157286400,
+        "poolKind": "heap",
+        "poolName": "G1 Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 84934656,
+        "poolKind": "heap",
+        "poolName": "G1 Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 56623104,
+        "poolKind": "heap",
+        "poolName": "G1 Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.086Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": -1,
+        "poolKind": "heap",
+        "poolName": "G1 Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.087Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 3145728,
+        "poolKind": "heap",
+        "poolName": "G1 Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.087Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 3145728,
+        "poolKind": "heap",
+        "poolName": "G1 Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.087Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 0,
+        "poolKind": "heap",
+        "poolName": "G1 Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.087Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 1073741824,
+        "poolKind": "heap",
+        "poolName": "G1 Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.087Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 913309696,
+        "poolKind": "heap",
+        "poolName": "G1 Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.087Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 32411160,
+        "poolKind": "heap",
+        "poolName": "G1 Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.087Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 1017118720,
+        "poolKind": "heap",
+        "poolName": "G1 Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.087Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/capacity",
+        "value": 2683363,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.087Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/used",
+        "value": 2683364,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.087Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/count",
+        "value": 61,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.087Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/capacity",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.087Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/used",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.088Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/count",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.088Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/count",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.088Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/cpu",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.088Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 1073741832,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.088Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 157286408,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.088Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 84934656,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.088Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 56623112,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.088Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 8,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.088Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 8,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.088Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.088Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 8,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.088Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 1073741832,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.088Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 3145736,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.089Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 3145728,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.089Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 8,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.089Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/count",
+        "value": 0,
+        "gcGen": [
+            "old"
+        ],
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.089Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/cpu",
+        "value": 0,
+        "gcGen": [
+            "old"
+        ],
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.089Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 1073741832,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: space  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.089Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 913309704,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: space  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.089Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 32411160,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: space  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.089Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 1017118728,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: space  string [internal]",
+        "gcName": [
+            "g1"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:47.090Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "jvm/heapAlloc/bytes",
+        "value": 31168008
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:50.350Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/overShadowed/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:50.351Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/total/capacity",
+        "value": 300000000000,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:50.351Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/replication/factor",
+        "value": 2,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:50.351Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/historical/count",
+        "value": 1,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:50.351Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/size",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:50.351Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/failed",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:50.351Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:50.351Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/dropQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:50.351Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "compact/task/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.352Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/overShadowed/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.353Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/total/capacity",
+        "value": 300000000000,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.353Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/replication/factor",
+        "value": 2,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.353Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "tier/historical/count",
+        "value": 1,
+        "tier": "_default_tier"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.353Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/size",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.353Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/failed",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.353Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/loadQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.353Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "segment/dropQueue/count",
+        "value": 0,
+        "server": "172.19.0.8:8083"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.353Z",
+        "service": "druid/coordinator",
+        "host": "172.19.0.5:8081",
+        "version": "0.18.0",
+        "metric": "compact/task/count",
+        "value": 0
+    }
+]

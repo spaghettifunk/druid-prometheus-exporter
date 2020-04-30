@@ -1,0 +1,2481 @@
+[
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:41.457Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sqlQuery/time",
+        "value": 50,
+        "dataSource": "[]",
+        "id": "95aa28fd-bfd1-4e05-8a99-94595ce371b4",
+        "nativeQueryIds": "[]",
+        "remoteAddress": "172.19.0.6",
+        "success": "true"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:41.458Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sqlQuery/bytes",
+        "value": 3,
+        "dataSource": "[]",
+        "id": "95aa28fd-bfd1-4e05-8a99-94595ce371b4",
+        "nativeQueryIds": "[]",
+        "remoteAddress": "172.19.0.6",
+        "success": "true"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:41.503Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sqlQuery/time",
+        "value": 94,
+        "dataSource": "[]",
+        "id": "a67b0815-589c-499a-88dd-dc4c2539c9f3",
+        "nativeQueryIds": "[]",
+        "remoteAddress": "172.19.0.6",
+        "success": "true"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:41.503Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sqlQuery/bytes",
+        "value": 3,
+        "dataSource": "[]",
+        "id": "a67b0815-589c-499a-88dd-dc4c2539c9f3",
+        "nativeQueryIds": "[]",
+        "remoteAddress": "172.19.0.6",
+        "success": "true"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.269Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/mem/max",
+        "value": 6237241344
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.269Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/mem/used",
+        "value": 6099644416
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.269Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/mem/actual/used",
+        "value": 6004207616
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.269Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/mem/actual/free",
+        "value": 233033728
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.270Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/max",
+        "value": 62725623808,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/etc/resolv.conf",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.270Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/used",
+        "value": 7082823680,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/etc/resolv.conf",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.270Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/files/count",
+        "value": 3907584,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/etc/resolv.conf",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.270Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/files/free",
+        "value": 3747540,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/etc/resolv.conf",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.270Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/max",
+        "value": 62725623808,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/etc/hostname",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.270Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/used",
+        "value": 7082823680,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/etc/hostname",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.270Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/files/count",
+        "value": 3907584,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/etc/hostname",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.270Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/files/free",
+        "value": 3747540,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/etc/hostname",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.271Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/max",
+        "value": 62725623808,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/etc/hosts",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.271Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/used",
+        "value": 7082823680,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/etc/hosts",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.271Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/files/count",
+        "value": 3907584,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/etc/hosts",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.271Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/files/free",
+        "value": 3747540,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/etc/hosts",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.271Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/max",
+        "value": 62725623808,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/opt/apache-druid-0.18.0/var",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.271Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/used",
+        "value": 7082823680,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/opt/apache-druid-0.18.0/var",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.271Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/files/count",
+        "value": 3907584,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/opt/apache-druid-0.18.0/var",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.271Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/fs/files/free",
+        "value": 3747540,
+        "fsDevName": "/dev/sda1",
+        "fsDirName": "/opt/apache-druid-0.18.0/var",
+        "fsOptions": [
+            "rw",
+            "relatime"
+        ],
+        "fsSysTypeName": "ext4",
+        "fsTypeName": "local"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.279Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/net/read/size",
+        "value": 49663,
+        "netAddress": "172.19.0.9",
+        "netHwaddr": "02:42:AC:13:00:09",
+        "netName": "eth0"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.280Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/net/write/dropped",
+        "value": 0,
+        "netAddress": "172.19.0.9",
+        "netHwaddr": "02:42:AC:13:00:09",
+        "netName": "eth0"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.280Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/net/read/overruns",
+        "value": 0,
+        "netAddress": "172.19.0.9",
+        "netHwaddr": "02:42:AC:13:00:09",
+        "netName": "eth0"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.280Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/net/write/errors",
+        "value": 0,
+        "netAddress": "172.19.0.9",
+        "netHwaddr": "02:42:AC:13:00:09",
+        "netName": "eth0"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.281Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/net/read/packets",
+        "value": 68,
+        "netAddress": "172.19.0.9",
+        "netHwaddr": "02:42:AC:13:00:09",
+        "netName": "eth0"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.281Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/net/read/errors",
+        "value": 0,
+        "netAddress": "172.19.0.9",
+        "netHwaddr": "02:42:AC:13:00:09",
+        "netName": "eth0"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.281Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/net/write/size",
+        "value": 41262,
+        "netAddress": "172.19.0.9",
+        "netHwaddr": "02:42:AC:13:00:09",
+        "netName": "eth0"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.281Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/net/write/collisions",
+        "value": 0,
+        "netAddress": "172.19.0.9",
+        "netHwaddr": "02:42:AC:13:00:09",
+        "netName": "eth0"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.282Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/net/write/packets",
+        "value": 70,
+        "netAddress": "172.19.0.9",
+        "netHwaddr": "02:42:AC:13:00:09",
+        "netName": "eth0"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.282Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/net/read/dropped",
+        "value": 0,
+        "netAddress": "172.19.0.9",
+        "netHwaddr": "02:42:AC:13:00:09",
+        "netName": "eth0"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.282Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/net/read/frame",
+        "value": 0,
+        "netAddress": "172.19.0.9",
+        "netHwaddr": "02:42:AC:13:00:09",
+        "netName": "eth0"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.282Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/net/write/overruns",
+        "value": 0,
+        "netAddress": "172.19.0.9",
+        "netHwaddr": "02:42:AC:13:00:09",
+        "netName": "eth0"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.283Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "0",
+        "cpuTime": "wait"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.283Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "0",
+        "cpuTime": "stolen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.284Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "0",
+        "cpuTime": "softIrq"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.284Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "0",
+        "cpuTime": "irq"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.284Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "0",
+        "cpuTime": "sys"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.284Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 2,
+        "cpuName": "0",
+        "cpuTime": "user"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.284Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "0",
+        "cpuTime": "nice"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.285Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 1,
+        "cpuName": "1",
+        "cpuTime": "wait"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.285Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "1",
+        "cpuTime": "stolen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.285Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "1",
+        "cpuTime": "softIrq"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.285Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "1",
+        "cpuTime": "irq"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.285Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 1,
+        "cpuName": "1",
+        "cpuTime": "sys"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.286Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 1,
+        "cpuName": "1",
+        "cpuTime": "user"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.286Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "1",
+        "cpuTime": "nice"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.286Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 1,
+        "cpuName": "2",
+        "cpuTime": "wait"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.286Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "2",
+        "cpuTime": "stolen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.286Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "2",
+        "cpuTime": "softIrq"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.286Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "2",
+        "cpuTime": "irq"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.286Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 1,
+        "cpuName": "2",
+        "cpuTime": "sys"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.286Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 2,
+        "cpuName": "2",
+        "cpuTime": "user"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.287Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "2",
+        "cpuTime": "nice"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.287Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "3",
+        "cpuTime": "wait"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.287Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "3",
+        "cpuTime": "stolen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.287Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "3",
+        "cpuTime": "softIrq"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.287Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "3",
+        "cpuTime": "irq"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.287Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 1,
+        "cpuName": "3",
+        "cpuTime": "sys"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.287Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 1,
+        "cpuName": "3",
+        "cpuTime": "user"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.287Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/cpu",
+        "value": 0,
+        "cpuName": "3",
+        "cpuTime": "nice"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.288Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/swap/pageIn",
+        "value": 31417
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.288Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/swap/pageOut",
+        "value": 44549
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.288Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/swap/max",
+        "value": 1073737728
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.288Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/swap/free",
+        "value": 40177664
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.288Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/uptime",
+        "value": 4729
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.288Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/la/1",
+        "value": 0.74
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.288Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/la/5",
+        "value": 1.68
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.288Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/la/15",
+        "value": 1.87
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.289Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/attemptFails",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.289Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/retrans/segs",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.289Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/in/segs",
+        "value": 57
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.289Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/out/rsts",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.289Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/passiveOpens",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.289Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/out/segs",
+        "value": 84
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.289Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/activeOpens",
+        "value": 1
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.289Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/estabResets",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.289Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/in/errs",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.290Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/net/inbound",
+        "value": 2
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.290Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/net/outbound",
+        "value": 22
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.290Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/inbound",
+        "value": 2
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.290Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/outbound",
+        "value": 22
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.290Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/state/established",
+        "value": 24
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.291Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/state/synSent",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.291Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/state/synRecv",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.291Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/state/finWait1",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.291Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/state/finWait2",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.291Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/state/timeWait",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.291Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/state/close",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.291Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/state/closeWait",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.291Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/state/lastAck",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.291Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/state/listen",
+        "value": 2
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.291Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/state/closing",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.291Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/state/idle",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.291Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sys/tcp/state/bound",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.304Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/mem/max",
+        "value": 1043333120,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.304Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/mem/committed",
+        "value": 1043333120,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.304Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/mem/used",
+        "value": 82451904,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.304Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/mem/init",
+        "value": 1073741824,
+        "memKind": "heap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.304Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/mem/max",
+        "value": -1,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.304Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/mem/committed",
+        "value": 99745792,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.304Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/mem/used",
+        "value": 97061688,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.304Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/mem/init",
+        "value": 2555904,
+        "memKind": "nonheap"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 251658240,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 17432576,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 17346880,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 2555904,
+        "poolKind": "nonheap",
+        "poolName": "Code Cache"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": -1,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 72876032,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 70883064,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 0,
+        "poolKind": "nonheap",
+        "poolName": "Metaspace"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 1073741824,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 9437184,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 8831744,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 0,
+        "poolKind": "nonheap",
+        "poolName": "Compressed Class Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 202899456,
+        "poolKind": "heap",
+        "poolName": "PS Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 201326592,
+        "poolKind": "heap",
+        "poolName": "PS Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 32381592,
+        "poolKind": "heap",
+        "poolName": "PS Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 197132288,
+        "poolKind": "heap",
+        "poolName": "PS Eden Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 30408704,
+        "poolKind": "heap",
+        "poolName": "PS Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.305Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 30408704,
+        "poolKind": "heap",
+        "poolName": "PS Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 16028992,
+        "poolKind": "heap",
+        "poolName": "PS Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 32505856,
+        "poolKind": "heap",
+        "poolName": "PS Survivor Space"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/max",
+        "value": 811597824,
+        "poolKind": "heap",
+        "poolName": "PS Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/committed",
+        "value": 811597824,
+        "poolKind": "heap",
+        "poolName": "PS Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/used",
+        "value": 34041320,
+        "poolKind": "heap",
+        "poolName": "PS Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/pool/init",
+        "value": 811597824,
+        "poolKind": "heap",
+        "poolName": "PS Old Gen"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/capacity",
+        "value": 2005308833,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/used",
+        "value": 2005308834,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/count",
+        "value": 109,
+        "bufferpoolName": "direct"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/capacity",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/used",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/bufferpool/count",
+        "value": 0,
+        "bufferpoolName": "mapped"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/count",
+        "value": 1,
+        "gcGen": [
+            "young"
+        ],
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/cpu",
+        "value": 6836133,
+        "gcGen": [
+            "young"
+        ],
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 261095424,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.306Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 201326592,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.307Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 32095808,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.307Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.0.name: eden  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.307Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 87031808,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.307Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 28835840,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.307Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.307Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.1.name: s0  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.307Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 87031808,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.307Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 30408704,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.307Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 16028992,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.307Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 0,
+        "gcGen": [
+            "young"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.0.space.2.name: s1  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.307Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/count",
+        "value": 0,
+        "gcGen": [
+            "old"
+        ],
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.307Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/cpu",
+        "value": 0,
+        "gcGen": [
+            "old"
+        ],
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.307Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/max",
+        "value": 811597824,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: old  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.308Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/capacity",
+        "value": 811597824,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: old  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.308Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/used",
+        "value": 34041320,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: old  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.308Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/gc/mem/init",
+        "value": 811597824,
+        "gcGen": [
+            "old"
+        ],
+        "gcGenSpaceName": "sun.gc.generation.1.space.0.name: old  string [internal]",
+        "gcName": [
+            "parallel"
+        ]
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.308Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/heapAlloc/bytes",
+        "value": 45202192
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.313Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "avatica/server/AvaticaJsonHandler/Handler/RequestTimings",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.313Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "avatica/remote/JsonHandler/Handler/Serialization",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.313Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jetty/numOpenConnections",
+        "value": 2
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.314Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/cpu/user",
+        "value": 3290
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.314Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/cpu/total",
+        "value": 4170
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.314Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/cpu/sys",
+        "value": 880
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.314Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/cpu/percent",
+        "value": 0.0695
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.338Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/events/emitted/delta",
+        "value": 163
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.338Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/buffers/dropped/delta",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.338Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/buffers/allocated/delta",
+        "value": 1
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.338Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/buffers/failed/delta",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.338Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/batchFilling/timeMsSum",
+        "value": 73048
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.339Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/batchFilling/count",
+        "value": 1
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.339Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/batchFilling/maxTimeMs",
+        "value": 73048
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.339Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/batchFilling/minTimeMs",
+        "value": 73048
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.339Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/successfulSending/timeMsSum",
+        "value": 254
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.339Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/successfulSending/count",
+        "value": 1
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.339Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/successfulSending/maxTimeMs",
+        "value": 254
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.339Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/successfulSending/minTimeMs",
+        "value": 254
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.339Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/events/emitQueue",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.339Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/events/large/emitQueue",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.339Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/buffers/emitQueue",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.339Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "emitter/buffers/reuseQueue",
+        "value": 1
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.341Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/success/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.341Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/interrupted/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.341Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.341Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/failed/count",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.342Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/delta/numEntries",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.342Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/delta/sizeBytes",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.342Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/delta/hits",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.342Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/delta/misses",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.342Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/delta/evictions",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.342Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/delta/hitRate",
+        "value": 0.0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.342Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/delta/averageBytes",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.342Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/delta/timeouts",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.342Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/delta/errors",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.342Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/delta/put/ok",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.342Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/delta/put/error",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.343Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/delta/put/oversized",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.343Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/total/numEntries",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.343Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/total/sizeBytes",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.343Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/total/hits",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.343Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/total/misses",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.343Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/total/evictions",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.343Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/total/hitRate",
+        "value": 0.0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.343Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/total/averageBytes",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.343Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/total/timeouts",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.343Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/total/errors",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.343Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/total/put/ok",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.344Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/total/put/error",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.344Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/total/put/oversized",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.344Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/caffeine/delta/requests",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.344Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/caffeine/total/requests",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.344Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/caffeine/delta/loadTime",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.344Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/caffeine/total/loadTime",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.344Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/caffeine/delta/evictionBytes",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.344Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "query/cache/caffeine/total/evictionBytes",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.350Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/threads/started",
+        "value": 1
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.350Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/threads/finished",
+        "value": 0
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.350Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/threads/live",
+        "value": 176
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.350Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/threads/liveDaemon",
+        "value": 175
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:09:55.350Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "jvm/threads/livePeak",
+        "value": 176
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:12.444Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sqlQuery/time",
+        "value": 45,
+        "dataSource": "[]",
+        "id": "eac8f804-2dbb-4b59-9afb-552679914c71",
+        "nativeQueryIds": "[]",
+        "remoteAddress": "172.19.0.6",
+        "success": "true"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:12.445Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sqlQuery/bytes",
+        "value": 3,
+        "dataSource": "[]",
+        "id": "eac8f804-2dbb-4b59-9afb-552679914c71",
+        "nativeQueryIds": "[]",
+        "remoteAddress": "172.19.0.6",
+        "success": "true"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:12.491Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sqlQuery/time",
+        "value": 89,
+        "dataSource": "[]",
+        "id": "e27125ba-bb31-4310-b95b-a5f0dea9dadd",
+        "nativeQueryIds": "[]",
+        "remoteAddress": "172.19.0.6",
+        "success": "true"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:12.491Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sqlQuery/bytes",
+        "value": 3,
+        "dataSource": "[]",
+        "id": "e27125ba-bb31-4310-b95b-a5f0dea9dadd",
+        "nativeQueryIds": "[]",
+        "remoteAddress": "172.19.0.6",
+        "success": "true"
+    },
+    {
+        "feed": "metrics",
+        "timestamp": "2020-04-29T16:10:43.722Z",
+        "service": "druid/broker",
+        "host": "172.19.0.9:8082",
+        "version": "0.18.0",
+        "metric": "sqlQuery/time",
+        "value": 43,
+        "dataSource": "[]",
+        "id": "6097f72d-5ee5-4336-bf0b-b503e825b28e",
+        "nativeQueryIds": "[]",
+        "remoteAddress": "172.19.0.6",
+        "success": "true"
+    }
+]
