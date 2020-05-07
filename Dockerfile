@@ -10,7 +10,7 @@ RUN go mod download
 
 COPY . .
 
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./bin/exporter
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./bin/server
 
 # final stage
 FROM alpine:3.9
@@ -24,4 +24,4 @@ RUN apk update && \
 
 WORKDIR /app
 
-ENTRYPOINT ["/app/bin/exporter"]
+ENTRYPOINT ["/app/bin/server"]
