@@ -52,10 +52,12 @@ func (cf *Coordinator) Evaluate(f Feed) {
 		break
 	case "segment/assigned/count":
 		break
-		cf.CoordinationExporter.FormatMetrics()
+		val, _ := f.Value.(float64)
+		cf.CoordinationExporter.SetSegmentAssignedCount(float64(val))
 		break
 	case "jetty/numOpenConnections":
-		cf.QueryJettyExporter.FormatMetrics()
+		val, _ := f.Value.(float64)
+		cf.QueryJettyExporter.SetNumOpenConnections(float64(val))
 		break
 	case "jvm/pool/committed":
 		break

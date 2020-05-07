@@ -40,7 +40,8 @@ func (hf *Historical) Evaluate(f Feed) {
 		break
 	case
 		"segment/scan/pending":
-		hf.QueryHistoricalExporter.FormatMetrics()
+		val, _ := f.Value.(float64)
+		hf.QueryHistoricalExporter.SetSegmentScanPending(float64(val))
 		break
 	case "sqlQuery/time":
 		val, _ := f.Value.(float64)
@@ -104,7 +105,8 @@ func (hf *Historical) Evaluate(f Feed) {
 	case "query/cache/total/put/error":
 		break
 	case "query/cache/total/put/oversized":
-		hf.QueryCacheExporter.FormatMetrics()
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetCacheTotalPutOversized(float64(val))
 		break
 	case "jvm/pool/committed":
 		break
@@ -136,7 +138,8 @@ func (hf *Historical) Evaluate(f Feed) {
 		hf.HealthJVMExporter.SetGCCPU(float64(val))
 		break
 	case "jetty/numOpenConnections":
-		hf.QueryJettyExporter.FormatMetrics()
+		val, _ := f.Value.(float64)
+		hf.QueryJettyExporter.SetNumOpenConnections(float64(val))
 		break
 	case "sys/swap/free":
 	case "sys/swap/max":
@@ -178,7 +181,8 @@ func (hf *Historical) Evaluate(f Feed) {
 		hf.SysExporter.SetCPU(float64(val))
 		break
 	case "segment/max":
-		hf.HealthHistoricalExporter.FormatMetrics()
+		val, _ := f.Value.(float64)
+		hf.HealthHistoricalExporter.SetSegmentMax(float64(val))
 		break
 	default:
 		break

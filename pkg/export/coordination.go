@@ -4,26 +4,30 @@ import "github.com/prometheus/client_golang/prometheus"
 
 // CoordinationExporter contains all the Prometheus metrics that are possible to gather from the Jetty service
 type CoordinationExporter struct {
+	SegmentAssignedCount prometheus.Counter `description:"number of segments assigned to be loaded in the cluster"`
 }
 
 // NewCoordinationExporter returns a new Jetty exporter object
 func NewCoordinationExporter() *CoordinationExporter {
-	qj := &CoordinationExporter{}
-	prometheus.MustRegister(qj)
+	ce := &CoordinationExporter{
+		SegmentAssignedCount: prometheus.NewCounter(prometheus.CounterOpts{
+			Namespace: "druid",
+			Subsystem: "coordinator",
+			Name:      "segment_assigned_count",
+			Help:      "number of segments assigned to be loaded in the cluster",
+			ConstLabels: prometheus.Labels{
+				"coordinator": "segment-assigned-count",
+			},
+		}),
+	}
 
-	return qj
+	// register all the prometheus metrics
+	prometheus.MustRegister(ce.SegmentAssignedCount)
+
+	return ce
 }
 
-// Describe will associate the value for druid exporter
-func (ce *CoordinationExporter) Describe(ch chan<- *prometheus.Desc) {
+// SetSegmentAssignedCount .
+func (ce *CoordinationExporter) SetSegmentAssignedCount(val float64) {
 
-}
-
-// Collect returns the prometheus metrics from Druid's Jetty
-func (ce *CoordinationExporter) Collect(ch chan<- prometheus.Metric) {
-
-}
-
-// FormatMetrics .
-func (ce *CoordinationExporter) FormatMetrics() {
 }

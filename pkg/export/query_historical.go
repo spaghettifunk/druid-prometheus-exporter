@@ -4,26 +4,30 @@ import "github.com/prometheus/client_golang/prometheus"
 
 // QueryHistoricalExporter contains all the Prometheus metrics that are possible to gather from the historicals
 type QueryHistoricalExporter struct {
+	SegmentScanPending prometheus.Counter `description:"number of segments in queue waiting to be scanned"`
 }
 
 // NewQueryHistoricalExporter returns a new historical exporter object
 func NewQueryHistoricalExporter() *QueryHistoricalExporter {
-	qh := &QueryHistoricalExporter{}
-	prometheus.MustRegister(qh)
+	qh := &QueryHistoricalExporter{
+		SegmentScanPending: prometheus.NewCounter(prometheus.CounterOpts{
+			Namespace: "druid",
+			Subsystem: "historical",
+			Name:      "segment_scan_pending",
+			Help:      "number of segments in queue waiting to be scanned",
+			ConstLabels: prometheus.Labels{
+				"historical": "segment-scan-pending",
+			},
+		}),
+	}
+
+	// register all prometheus metrics
+	prometheus.MustRegister(qh.SegmentScanPending)
 
 	return qh
 }
 
-// Describe will associate the value for druid exporter
-func (qh *QueryHistoricalExporter) Describe(ch chan<- *prometheus.Desc) {
+// SetSegmentScanPending .
+func (qh *QueryHistoricalExporter) SetSegmentScanPending(val float64) {
 
-}
-
-// Collect returns the prometheus metrics from Druid's historicals
-func (qh *QueryHistoricalExporter) Collect(ch chan<- prometheus.Metric) {
-
-}
-
-// FormatMetrics .
-func (qh *QueryHistoricalExporter) FormatMetrics() {
 }

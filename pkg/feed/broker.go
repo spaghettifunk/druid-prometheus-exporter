@@ -128,7 +128,8 @@ func (bf *Broker) Evaluate(f Feed) {
 		bf.HealthJVMExporter.SetGCCPU(float64(val))
 		break
 	case "jetty/numOpenConnections":
-		bf.QueryJettyExporter.FormatMetrics()
+		val, _ := f.Value.(float64)
+		bf.QueryJettyExporter.SetNumOpenConnections(float64(val))
 		break
 	case "query/cache/delta/numEntries":
 		break
@@ -177,7 +178,8 @@ func (bf *Broker) Evaluate(f Feed) {
 	case "query/cache/total/put/error":
 		break
 	case "query/cache/total/put/oversized":
-		bf.QueryCacheExporter.FormatMetrics()
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetCacheTotalPutOversized(float64(val))
 		break
 	default:
 		break
