@@ -15,11 +15,15 @@ func NewHealthHistoricalExporter() *HealthHistoricalExporter {
 }
 
 // Describe will associate the value for druid exporter
-func (bc *HealthHistoricalExporter) Describe(ch chan<- *prometheus.Desc) {
+func (hh *HealthHistoricalExporter) Describe(ch chan<- *prometheus.Desc) {
 
 }
 
 // Collect returns the prometheus metrics from Druid's Jetty
-func (bc *HealthHistoricalExporter) Collect(ch chan<- prometheus.Metric) {
+func (hh *HealthHistoricalExporter) Collect(ch chan<- prometheus.Metric) {
 
+}
+
+// FormatMetrics .
+func (hh *HealthHistoricalExporter) FormatMetrics() {
 }

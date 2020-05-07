@@ -15,11 +15,15 @@ func NewQueryJettyExporter() *QueryJettyExporter {
 }
 
 // Describe will associate the value for druid exporter
-func (bc *QueryJettyExporter) Describe(ch chan<- *prometheus.Desc) {
+func (jq *QueryJettyExporter) Describe(ch chan<- *prometheus.Desc) {
 
 }
 
 // Collect returns the prometheus metrics from Druid's Jetty
-func (bc *QueryJettyExporter) Collect(ch chan<- prometheus.Metric) {
+func (jq *QueryJettyExporter) Collect(ch chan<- prometheus.Metric) {
 
+}
+
+// FormatMetrics .
+func (jq *QueryJettyExporter) FormatMetrics() {
 }

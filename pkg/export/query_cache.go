@@ -15,11 +15,15 @@ func NewQueryCacheExporter() *QueryCacheExporter {
 }
 
 // Describe will associate the value for druid exporter
-func (bc *QueryCacheExporter) Describe(ch chan<- *prometheus.Desc) {
+func (qc *QueryCacheExporter) Describe(ch chan<- *prometheus.Desc) {
 
 }
 
 // Collect returns the prometheus metrics from Druid's Tranquillity
-func (bc *QueryCacheExporter) Collect(ch chan<- prometheus.Metric) {
+func (qc *QueryCacheExporter) Collect(ch chan<- prometheus.Metric) {
 
+}
+
+// FormatMetrics .
+func (qc *QueryCacheExporter) FormatMetrics() {
 }
