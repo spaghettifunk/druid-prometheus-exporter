@@ -2,32 +2,65 @@ package collect
 
 import (
 	"net/http"
-	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/spaghettifunk/druid-prometheus-exporter/pkg/export"
+	"github.com/spaghettifunk/druid-prometheus-exporter/pkg/feed"
 )
-
-// CommonMetric represents the common fields of the metric feed from Druid
-type CommonMetric struct {
-	Timestamp time.Time `json:"timestamp"`
-	Metric    string    `json:"metric"`
-	Service   string    `json:"service"`
-	Host      string    `json:"host"`
-	Value     int       `json:"value"`
-}
 
 // DruidCollectMetrics receives the metrics from Druid and exports them in Prometheus
 func DruidCollectMetrics(c *gin.Context) {
-
-	var cm CommonMetric
-	if err := c.ShouldBindJSON(&cm); err != nil {
+	var feeds []feed.Feed
+	if err := c.ShouldBindJSON(&feeds); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
 
-	// channel the body to the appropriate exporter in a go func
-	// parse the body in the struct that is more convenient
-	// export to Prometheus
-
+	var sf feed.Service
+	for _, f := range feeds {
+		switch f.Service {
+		case "druid/broker":
+			sf = &feed.Broker{
+				QueryBrokerExporter: c.MustGet("QueryBrokerExporter").(*export.QueryBrokerExporter),
+				QueryCacheExporter:  c.MustGet("QueryCacheExporter").(*export.QueryCacheExporter),
+				QueryJettyExporter:  c.MustGet("QueryJettyExporter").(*export.QueryJettyExporter),
+				HealthJVMExporter:   c.MustGet("HealthJVMExporter").(*export.HealthJVMExporter),
+				SQLExporter:         c.MustGet("SQLExporter").(*export.SQLExporter),
+				SysExporter:         c.MustGet("SysExporter").(*export.SysExporter),
+			}
+			break
+		case "druid/coordinator":
+			sf = &feed.Coordinator{
+				CoordinationExporter: nil,
+				HealthJVMExporter:    c.MustGet("HealthJVMExporter").(*export.HealthJVMExporter),
+				QueryJettyExporter:   c.MustGet("QueryJettyExporter").(*export.QueryJettyExporter),
+			}
+			break
+		case "druid/historical":
+			sf = &feed.Historical{
+				QueryHistoricalExporter:  c.MustGet("QueryHistoricalExporter").(*export.QueryHistoricalExporter),
+				HealthHistoricalExporter: c.MustGet("HealthHistoricalExporter").(*export.HealthHistoricalExporter),
+				HealthJVMExporter:        c.MustGet("HealthJVMExporter").(*export.HealthJVMExporter),
+				QueryCacheExporter:       c.MustGet("QueryCacheExporter").(*export.QueryCacheExporter),
+				QueryJettyExporter:       c.MustGet("QueryJettyExporter").(*export.QueryJettyExporter),
+				SQLExporter:              c.MustGet("SQLExporter").(*export.SQLExporter),
+				SysExporter:              c.MustGet("SysExporter").(*export.SysExporter),
+			}
+			break
+		case "druid/middleManager":
+			sf = &feed.MiddleManager{
+				HealthJVMExporter: c.MustGet("HealthJVMExporter").(*export.HealthJVMExporter),
+			}
+			break
+		case "druid/router":
+			sf = &feed.Router{
+				HealthJVMExporter: c.MustGet("HealthJVMExporter").(*export.HealthJVMExporter),
+			}
+			break
+		default:
+			continue
+		}
+		sf.Evaluate(f)
+	}
 	c.JSON(http.StatusOK, "ok")
 }

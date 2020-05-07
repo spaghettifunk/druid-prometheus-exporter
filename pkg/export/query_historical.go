@@ -15,11 +15,15 @@ func NewQueryHistoricalExporter() *QueryHistoricalExporter {
 }
 
 // Describe will associate the value for druid exporter
-func (bc *QueryHistoricalExporter) Describe(ch chan<- *prometheus.Desc) {
+func (qh *QueryHistoricalExporter) Describe(ch chan<- *prometheus.Desc) {
 
 }
 
 // Collect returns the prometheus metrics from Druid's historicals
-func (bc *QueryHistoricalExporter) Collect(ch chan<- prometheus.Metric) {
+func (qh *QueryHistoricalExporter) Collect(ch chan<- prometheus.Metric) {
 
+}
+
+// FormatMetrics .
+func (qh *QueryHistoricalExporter) FormatMetrics() {
 }

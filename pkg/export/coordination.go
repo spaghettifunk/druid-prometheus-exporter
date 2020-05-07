@@ -15,11 +15,15 @@ func NewCoordinationExporter() *CoordinationExporter {
 }
 
 // Describe will associate the value for druid exporter
-func (bc *CoordinationExporter) Describe(ch chan<- *prometheus.Desc) {
+func (ce *CoordinationExporter) Describe(ch chan<- *prometheus.Desc) {
 
 }
 
 // Collect returns the prometheus metrics from Druid's Jetty
-func (bc *CoordinationExporter) Collect(ch chan<- prometheus.Metric) {
+func (ce *CoordinationExporter) Collect(ch chan<- prometheus.Metric) {
 
+}
+
+// FormatMetrics .
+func (ce *CoordinationExporter) FormatMetrics() {
 }
