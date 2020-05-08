@@ -112,7 +112,7 @@ func (hf *Historical) Evaluate(f Feed) {
 		break
 	case "query/cache/total/put/oversized":
 		val, _ := f.Value.(float64)
-		hf.QueryCacheExporter.SetCacheTotalPutOversized(float64(val))
+		hf.QueryCacheExporter.SetTotalPutOversized(float64(val))
 		break
 	case "jvm/pool/committed":
 		val, _ := f.Value.(float64)

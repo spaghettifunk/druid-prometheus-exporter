@@ -233,7 +233,7 @@ func (bf *Broker) Evaluate(f Feed) {
 		break
 	case "query/cache/total/put/oversized":
 		val, _ := f.Value.(float64)
-		bf.QueryCacheExporter.SetCacheTotalPutOversized(float64(val))
+		bf.QueryCacheExporter.SetTotalPutOversized(float64(val))
 		break
 	default:
 		break
