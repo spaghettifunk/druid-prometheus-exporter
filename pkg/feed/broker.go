@@ -66,62 +66,116 @@ func (bf *Broker) Evaluate(f Feed) {
 		bf.SQLExporter.SetSQLQueryBytes(float64(val))
 		break
 	case "sys/swap/free":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetSwapFree(float64(val))
 		break
 	case "sys/swap/max":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetSwapMax(float64(val))
 		break
 	case "sys/swap/pageIn":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetSwapPageIn(float64(val))
 		break
 	case "sys/swap/pageOut":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetSwapPageOut(float64(val))
 		break
 	case "sys/disk/write/count":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetDiskWriteCount(float64(val))
 		break
 	case "sys/disk/read/count":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetDiskReadCount(float64(val))
 		break
 	case "sys/disk/write/size":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetDiskWriteSize(float64(val))
 		break
 	case "sys/disk/read/size":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetDiskReadSize(float64(val))
 		break
 	case "sys/net/read/size":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetNetReadSize(float64(val))
 		break
 	case "sys/mem/max":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetMemMax(float64(val))
 		break
 	case "sys/mem/used":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetMemUsed(float64(val))
 		break
 	case "sys/fs/max":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetFSMax(float64(val))
 		break
 	case "sys/fs/used":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetFSUsed(float64(val))
 		break
 	case "sys/net/write/size":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetNetWriteSize(float64(val))
 		break
 	case "sys/storage/used":
+		val, _ := f.Value.(float64)
+		bf.SysExporter.SetStorageUsed(float64(val))
 		break
 	case "sys/cpu":
 		val, _ := f.Value.(float64)
 		bf.SysExporter.SetCPU(float64(val))
 		break
 	case "jvm/pool/committed":
+		val, _ := f.Value.(float64)
+		bf.HealthJVMExporter.SetPoolCommited(float64(val))
 		break
 	case "jvm/pool/init":
+		val, _ := f.Value.(float64)
+		bf.HealthJVMExporter.SetPoolInit(float64(val))
 		break
 	case "jvm/pool/max":
+		val, _ := f.Value.(float64)
+		bf.HealthJVMExporter.SetPoolMax(float64(val))
 		break
 	case "jvm/pool/used":
+		val, _ := f.Value.(float64)
+		bf.HealthJVMExporter.SetPoolUsed(float64(val))
 		break
 	case "jvm/bufferpool/count":
+		val, _ := f.Value.(float64)
+		bf.HealthJVMExporter.SetBufferpoolCount(float64(val))
 		break
 	case "jvm/bufferpool/used":
+		val, _ := f.Value.(float64)
+		bf.HealthJVMExporter.SetBufferpoolUsed(float64(val))
 		break
 	case "jvm/bufferpool/capacity":
+		val, _ := f.Value.(float64)
+		bf.HealthJVMExporter.SetBufferpoolCapacity(float64(val))
 		break
 	case "jvm/mem/init":
+		val, _ := f.Value.(float64)
+		bf.HealthJVMExporter.SetMemInit(float64(val))
 		break
 	case "jvm/mem/max":
+		val, _ := f.Value.(float64)
+		bf.HealthJVMExporter.SetMemMax(float64(val))
 		break
 	case "jvm/mem/used":
+		val, _ := f.Value.(float64)
+		bf.HealthJVMExporter.SetMemUsed(float64(val))
 		break
 	case "jvm/mem/committed":
+		val, _ := f.Value.(float64)
+		bf.HealthJVMExporter.SetMemCommitted(float64(val))
 		break
 	case "jvm/gc/count":
+		val, _ := f.Value.(float64)
+		bf.HealthJVMExporter.SetGCCount(float64(val))
 		break
 	case "jvm/gc/cpu":
 		val, _ := f.Value.(float64)
