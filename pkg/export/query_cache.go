@@ -255,73 +255,121 @@ func NewQueryCacheExporter() *QueryCacheExporter {
 }
 
 // SetDeltaNumEntries .
-func (qc *QueryCacheExporter) SetDeltaNumEntries(val float64) {}
+func (qc *QueryCacheExporter) SetDeltaNumEntries(val float64) {
+	qc.DeltaNumEntries.Add(val)
+}
 
 // SetDeltaSizeBytes .
-func (qc *QueryCacheExporter) SetDeltaSizeBytes(val float64) {}
+func (qc *QueryCacheExporter) SetDeltaSizeBytes(val float64) {
+	qc.DeltaSizeBytes.Add(val)
+}
 
 // SetDeltaHits .
-func (qc *QueryCacheExporter) SetDeltaHits(val float64) {}
+func (qc *QueryCacheExporter) SetDeltaHits(val float64) {
+	qc.DeltaHits.Add(val)
+}
 
 // SetDeltaMisses .
-func (qc *QueryCacheExporter) SetDeltaMisses(val float64) {}
+func (qc *QueryCacheExporter) SetDeltaMisses(val float64) {
+	qc.DeltaMisses.Add(val)
+}
 
 // SetDeltaEvictions .
-func (qc *QueryCacheExporter) SetDeltaEvictions(val float64) {}
+func (qc *QueryCacheExporter) SetDeltaEvictions(val float64) {
+	qc.DeltaEvictions.Add(val)
+}
 
 // SetDeltaHitRate .
-func (qc *QueryCacheExporter) SetDeltaHitRate(val float64) {}
+func (qc *QueryCacheExporter) SetDeltaHitRate(val float64) {
+	qc.DeltaHitRate.Add(val)
+}
 
 // SetDeltaAverageBytes .
-func (qc *QueryCacheExporter) SetDeltaAverageBytes(val float64) {}
+func (qc *QueryCacheExporter) SetDeltaAverageBytes(val float64) {
+	qc.DeltaAverageBytes.Add(val)
+}
 
 // SetDeltaTimeouts .
-func (qc *QueryCacheExporter) SetDeltaTimeouts(val float64) {}
+func (qc *QueryCacheExporter) SetDeltaTimeouts(val float64) {
+	qc.DeltaTimeouts.Add(val)
+}
 
 // SetDeltaErrors .
-func (qc *QueryCacheExporter) SetDeltaErrors(val float64) {}
+func (qc *QueryCacheExporter) SetDeltaErrors(val float64) {
+	qc.DeltaErrors.Add(val)
+}
 
 // SetDeltaPutOK .
-func (qc *QueryCacheExporter) SetDeltaPutOK(val float64) {}
+func (qc *QueryCacheExporter) SetDeltaPutOK(val float64) {
+	qc.DeltaPutOK.Add(val)
+}
 
 // SetDeltaPutError .
-func (qc *QueryCacheExporter) SetDeltaPutError(val float64) {}
+func (qc *QueryCacheExporter) SetDeltaPutError(val float64) {
+	qc.DeltaPutError.Add(val)
+}
 
 // SetDeltaPutOversized .
-func (qc *QueryCacheExporter) SetDeltaPutOversized(val float64) {}
+func (qc *QueryCacheExporter) SetDeltaPutOversized(val float64) {
+	qc.DeltaPutOversized.Add(val)
+}
 
 // SetTotalNumEntries .
-func (qc *QueryCacheExporter) SetTotalNumEntries(val float64) {}
+func (qc *QueryCacheExporter) SetTotalNumEntries(val float64) {
+	qc.TotalNumEntries.Add(val)
+}
 
 // SetTotalSizeBytes .
-func (qc *QueryCacheExporter) SetTotalSizeBytes(val float64) {}
+func (qc *QueryCacheExporter) SetTotalSizeBytes(val float64) {
+	qc.TotalSizeBytes.Add(val)
+}
 
 // SetTotalHits .
-func (qc *QueryCacheExporter) SetTotalHits(val float64) {}
+func (qc *QueryCacheExporter) SetTotalHits(val float64) {
+	qc.TotalHits.Add(val)
+}
 
 // SetTotalMisses .
-func (qc *QueryCacheExporter) SetTotalMisses(val float64) {}
+func (qc *QueryCacheExporter) SetTotalMisses(val float64) {
+	qc.TotalMisses.Add(val)
+}
 
 // SetTotalEvictions .
-func (qc *QueryCacheExporter) SetTotalEvictions(val float64) {}
+func (qc *QueryCacheExporter) SetTotalEvictions(val float64) {
+	qc.TotalEvictions.Add(val)
+}
 
 // SetTotalHitRate .
-func (qc *QueryCacheExporter) SetTotalHitRate(val float64) {}
+func (qc *QueryCacheExporter) SetTotalHitRate(val float64) {
+	qc.TotalHitRate.Add(val)
+}
 
 // SetTotalAverageBytes .
-func (qc *QueryCacheExporter) SetTotalAverageBytes(val float64) {}
+func (qc *QueryCacheExporter) SetTotalAverageBytes(val float64) {
+	qc.TotalAverageBytes.Add(val)
+}
 
 // SetTotalTimeouts .
-func (qc *QueryCacheExporter) SetTotalTimeouts(val float64) {}
+func (qc *QueryCacheExporter) SetTotalTimeouts(val float64) {
+	qc.TotalTimeouts.Add(val)
+}
 
 // SetTotalErrors .
-func (qc *QueryCacheExporter) SetTotalErrors(val float64) {}
+func (qc *QueryCacheExporter) SetTotalErrors(val float64) {
+	qc.TotalErrors.Add(val)
+}
 
 // SetTotalPutOK .
-func (qc *QueryCacheExporter) SetTotalPutOK(val float64) {}
+func (qc *QueryCacheExporter) SetTotalPutOK(val float64) {
+	qc.TotalPutOK.Add(val)
+}
 
 // SetTotalPutError .
-func (qc *QueryCacheExporter) SetTotalPutError(val float64) {}
+func (qc *QueryCacheExporter) SetTotalPutError(val float64) {
+	qc.TotalPutError.Add(val)
+}
 
 // SetTotalPutOversized .
-func (qc *QueryCacheExporter) SetTotalPutOversized(val float64) {}
+func (qc *QueryCacheExporter) SetTotalPutOversized(val float64) {
+	qc.TotalPutOversized.Add(val)
+}
