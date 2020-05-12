@@ -19,11 +19,11 @@ func (bf *Broker) Evaluate(f Feed) {
 	switch f.Metric {
 	case "query/time":
 		val, _ := f.Value.(float64)
-		bf.QueryBrokerExporter.SetQueryTime(float64(val))
+		bf.QueryBrokerExporter.SetQueryTime(f.DataSource, float64(val))
 		break
 	case "query/bytes":
 		val, _ := f.Value.(float64)
-		bf.QueryBrokerExporter.SetQueryBytes(float64(val))
+		bf.QueryBrokerExporter.SetQueryBytes(f.DataSource, float64(val))
 		break
 	case "query/node/time":
 		val, _ := f.Value.(float64)

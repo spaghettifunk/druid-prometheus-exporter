@@ -4,111 +4,86 @@ import "github.com/prometheus/client_golang/prometheus"
 
 // QueryHistoricalExporter contains all the Prometheus metrics that are possible to gather from the historicals
 type QueryHistoricalExporter struct {
-	QueryTime                prometheus.Counter `description:"milliseconds taken to complete a query"`
-	QuerySegmentTime         prometheus.Counter `description:"milliseconds taken to query individual segment. Includes time to page in the segment from disk"`
-	QueryWaitTime            prometheus.Counter `description:"milliseconds spent waiting for a segment to be scanned"`
-	QuerySegmentAndCacheTime prometheus.Counter `description:"milliseconds taken to query individual segment or hit the cache (if it is enabled on the Historical process)"`
-	QueryCPUTime             prometheus.Counter `description:"Microseconds of CPU time taken to complete a query"`
-	QueryCount               prometheus.Counter `description:"number of total queries"`
-	QuerySuccessCount        prometheus.Counter `description:"number of queries successfully processed"`
-	QueryFailedCount         prometheus.Counter `description:"number of failed queries"`
-	QueryInterruptedCount    prometheus.Counter `description:"number of queries interrupted due to cancellation or timeout"`
-	SegmentScanPending       prometheus.Counter `description:"number of segments in queue waiting to be scanned"`
+	QueryTime                *prometheus.HistogramVec `description:"milliseconds taken to complete a query"`
+	QuerySegmentTime         *prometheus.HistogramVec `description:"milliseconds taken to query individual segment. Includes time to page in the segment from disk"`
+	QueryWaitTime            *prometheus.HistogramVec `description:"milliseconds spent waiting for a segment to be scanned"`
+	QuerySegmentAndCacheTime *prometheus.HistogramVec `description:"milliseconds taken to query individual segment or hit the cache (if it is enabled on the Historical process)"`
+	QueryCPUTime             *prometheus.HistogramVec `description:"Microseconds of CPU time taken to complete a query"`
+	QueryCount               *prometheus.GaugeVec     `description:"number of total queries"`
+	QuerySuccessCount        *prometheus.GaugeVec     `description:"number of queries successfully processed"`
+	QueryFailedCount         *prometheus.GaugeVec     `description:"number of failed queries"`
+	QueryInterruptedCount    *prometheus.GaugeVec     `description:"number of queries interrupted due to cancellation or timeout"`
+	SegmentScanPending       *prometheus.GaugeVec     `description:"number of segments in queue waiting to be scanned"`
 }
 
 // NewQueryHistoricalExporter returns a new historical exporter object
 func NewQueryHistoricalExporter() *QueryHistoricalExporter {
 	qh := &QueryHistoricalExporter{
-		QueryTime: prometheus.NewCounter(prometheus.CounterOpts{
+		QueryTime: prometheus.NewHistogramVec(prometheus.HistogramOpts{
 			Namespace: "druid",
 			Subsystem: "historical",
 			Name:      "query_time",
 			Help:      "milliseconds taken to complete a query",
-			ConstLabels: prometheus.Labels{
-				"historical": "query-time",
-			},
-		}),
-		QuerySegmentTime: prometheus.NewCounter(prometheus.CounterOpts{
+			Buckets:   []float64{10, 100, 500, 1000, 2000, 3000, 5000, 7000, 10000},
+		}, []string{"dataSource", "type", "interval", "hasFilters", "duration", "context", "remoteAddress", "id", "numMetrics", "numComplexMetrics", "numDimensions", "threshold", "dimension"}),
+		QuerySegmentTime: prometheus.NewHistogramVec(prometheus.HistogramOpts{
 			Namespace: "druid",
 			Subsystem: "historical",
 			Name:      "query_segment_time",
 			Help:      "milliseconds taken to query individual segment. Includes time to page in the segment from disk",
-			ConstLabels: prometheus.Labels{
-				"historical": "query-segment-time",
-			},
-		}),
-		QueryWaitTime: prometheus.NewCounter(prometheus.CounterOpts{
+			Buckets:   []float64{10, 100, 500, 1000, 2000, 3000, 5000, 7000, 10000},
+		}, []string{"id", "status", "segment"}),
+		QueryWaitTime: prometheus.NewHistogramVec(prometheus.HistogramOpts{
 			Namespace: "druid",
 			Subsystem: "historical",
 			Name:      "query_wait_time",
 			Help:      "milliseconds spent waiting for a segment to be scanned",
-			ConstLabels: prometheus.Labels{
-				"historical": "query-wait-time",
-			},
-		}),
-		QuerySegmentAndCacheTime: prometheus.NewCounter(prometheus.CounterOpts{
+			Buckets:   []float64{10, 100, 500, 1000, 2000, 3000, 5000, 7000, 10000},
+		}, []string{"id", "segment"}),
+		QuerySegmentAndCacheTime: prometheus.NewHistogramVec(prometheus.HistogramOpts{
 			Namespace: "druid",
 			Subsystem: "historical",
 			Name:      "query_segmentandcache_time",
 			Help:      "milliseconds taken to query individual segment or hit the cache (if it is enabled on the Historical process)",
-			ConstLabels: prometheus.Labels{
-				"historical": "query-segmentandcache-time",
-			},
-		}),
-		QueryCPUTime: prometheus.NewCounter(prometheus.CounterOpts{
+			Buckets:   []float64{10, 100, 500, 1000, 2000, 3000, 5000, 7000, 10000},
+		}, []string{"id", "segment"}),
+		QueryCPUTime: prometheus.NewHistogramVec(prometheus.HistogramOpts{
 			Namespace: "druid",
 			Subsystem: "historical",
 			Name:      "query_cpu_time",
 			Help:      "Microseconds of CPU time taken to complete a query",
-			ConstLabels: prometheus.Labels{
-				"historical": "query-cpu-time",
-			},
-		}),
-		QueryCount: prometheus.NewCounter(prometheus.CounterOpts{
+			Buckets:   []float64{10, 100, 500, 1000, 2000, 3000, 5000, 7000, 10000},
+		}, []string{"dataSource", "type", "interval", "hasFilters", "duration", "context", "remoteAddress", "id", "numMetrics", "numComplexMetrics", "numDimensions", "threshold", "dimension"}),
+		QueryCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "historical",
 			Name:      "query_count",
 			Help:      "number of total queries",
-			ConstLabels: prometheus.Labels{
-				"historical": "query-count",
-			},
-		}),
-		QuerySuccessCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		QuerySuccessCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "historical",
 			Name:      "query_success_count",
 			Help:      "number of queries successfully processed",
-			ConstLabels: prometheus.Labels{
-				"historical": "query-success-count",
-			},
-		}),
-		QueryFailedCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		QueryFailedCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "historical",
 			Name:      "query_failed_count",
 			Help:      "number of failed queries",
-			ConstLabels: prometheus.Labels{
-				"historical": "query-failed-count",
-			},
-		}),
-		QueryInterruptedCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		QueryInterruptedCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "historical",
 			Name:      "query_interrupted_count",
 			Help:      "number of queries interrupted due to cancellation or timeout",
-			ConstLabels: prometheus.Labels{
-				"historical": "query-interrupted-count",
-			},
-		}),
-		SegmentScanPending: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		SegmentScanPending: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "historical",
 			Name:      "segment_scan_pending",
 			Help:      "number of segments in queue waiting to be scanned",
-			ConstLabels: prometheus.Labels{
-				"historical": "segment-scan-pending",
-			},
-		}),
+		}, []string{}),
 	}
 
 	// register all prometheus metrics
@@ -127,51 +102,51 @@ func NewQueryHistoricalExporter() *QueryHistoricalExporter {
 }
 
 // SetQueryTime .
-func (qh *QueryHistoricalExporter) SetQueryTime(val float64) {
-
+func (qh *QueryHistoricalExporter) SetQueryTime(labels map[string]string, val float64) {
+	qh.QueryTime.With(labels).Observe(val)
 }
 
 // SetQuerySegmentTime .
-func (qh *QueryHistoricalExporter) SetQuerySegmentTime(val float64) {
-
+func (qh *QueryHistoricalExporter) SetQuerySegmentTime(labels map[string]string, val float64) {
+	qh.QuerySegmentTime.With(labels).Observe(val)
 }
 
 // SetQueryWaitTime .
-func (qh *QueryHistoricalExporter) SetQueryWaitTime(val float64) {
-
+func (qh *QueryHistoricalExporter) SetQueryWaitTime(labels map[string]string, val float64) {
+	qh.QueryWaitTime.With(labels).Observe(val)
 }
 
 // SetQuerySegmentAndCacheTime .
-func (qh *QueryHistoricalExporter) SetQuerySegmentAndCacheTime(val float64) {
-
+func (qh *QueryHistoricalExporter) SetQuerySegmentAndCacheTime(labels map[string]string, val float64) {
+	qh.QuerySegmentAndCacheTime.With(labels).Observe(val)
 }
 
 // SetQueryCPUTime .
-func (qh *QueryHistoricalExporter) SetQueryCPUTime(val float64) {
-
+func (qh *QueryHistoricalExporter) SetQueryCPUTime(labels map[string]string, val float64) {
+	qh.QueryCPUTime.With(labels).Observe(val)
 }
 
 // SetQueryCount .
 func (qh *QueryHistoricalExporter) SetQueryCount(val float64) {
-
+	qh.QueryCount.WithLabelValues().Add(val)
 }
 
 // SetQuerySuccessCount .
 func (qh *QueryHistoricalExporter) SetQuerySuccessCount(val float64) {
-
+	qh.QuerySuccessCount.WithLabelValues().Add(val)
 }
 
 // SetQueryFailedCount .
 func (qh *QueryHistoricalExporter) SetQueryFailedCount(val float64) {
-
+	qh.QueryFailedCount.WithLabelValues().Add(val)
 }
 
 // SetQueryInterruptedCount .
 func (qh *QueryHistoricalExporter) SetQueryInterruptedCount(val float64) {
-
+	qh.QueryInterruptedCount.WithLabelValues().Add(val)
 }
 
 // SetSegmentScanPending .
 func (qh *QueryHistoricalExporter) SetSegmentScanPending(val float64) {
-
+	qh.SegmentScanPending.WithLabelValues().Add(val)
 }

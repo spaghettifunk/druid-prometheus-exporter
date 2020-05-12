@@ -6,37 +6,37 @@ import (
 
 // QueryBrokerExporter contains all the Prometheus metrics that are possible to gather from the brokers
 type QueryBrokerExporter struct {
-	QueryTime             prometheus.Summary `description:"milliseconds taken to complete a query"`
-	QueryBytes            prometheus.Summary `description:"number of bytes returned in query response"`
-	QueryNodeTime         prometheus.Summary `description:"milliseconds taken to query individual historical/realtime processes"`
-	QueryNodeBytes        prometheus.Summary `description:"number of bytes returned from querying individual historical/realtime processes"`
-	QueryNodetTtfb        prometheus.Summary `description:"time to first byte. Milliseconds elapsed until Broker starts receiving the response from individual historical/realtime processes"`
-	QueryNodeBackpressure prometheus.Summary `description:"milliseconds that the channel to this process has spent suspended due to backpressure"`
-	QueryCount            prometheus.Counter `description:"number of total queries"`
-	QuerySuccessCount     prometheus.Counter `description:"number of queries successfully processed"`
-	QueryFailedCount      prometheus.Counter `description:"number of failed queries"`
-	QueryInterruptedCount prometheus.Counter `description:"number of queries interrupted due to cancellation or timeout"`
-	SQLQueryTime          prometheus.Summary `description:"milliseconds taken to complete a SQL query"`
-	SQLQueryBytes         prometheus.Summary `description:"number of bytes returned in SQL query response"`
+	QueryTime             *prometheus.HistogramVec `description:"milliseconds taken to complete a query"`
+	QueryBytes            *prometheus.HistogramVec `description:"number of bytes returned in query response"`
+	QueryNodeTime         prometheus.Summary       `description:"milliseconds taken to query individual historical/realtime processes"`
+	QueryNodeBytes        prometheus.Summary       `description:"number of bytes returned from querying individual historical/realtime processes"`
+	QueryNodetTtfb        prometheus.Summary       `description:"time to first byte. Milliseconds elapsed until Broker starts receiving the response from individual historical/realtime processes"`
+	QueryNodeBackpressure prometheus.Summary       `description:"milliseconds that the channel to this process has spent suspended due to backpressure"`
+	QueryCount            *prometheus.GaugeVec     `description:"number of total queries"`
+	QuerySuccessCount     *prometheus.GaugeVec     `description:"number of queries successfully processed"`
+	QueryFailedCount      *prometheus.GaugeVec     `description:"number of failed queries"`
+	QueryInterruptedCount *prometheus.GaugeVec     `description:"number of queries interrupted due to cancellation or timeout"`
+	SQLQueryTime          prometheus.Summary       `description:"milliseconds taken to complete a SQL query"`
+	SQLQueryBytes         prometheus.Summary       `description:"number of bytes returned in SQL query response"`
 }
 
 // NewQueryBrokerExporter returns a new broker exporter object
 func NewQueryBrokerExporter() *QueryBrokerExporter {
 	qb := &QueryBrokerExporter{
-		QueryTime: prometheus.NewSummary(prometheus.SummaryOpts{
-			Namespace:  "druid",
-			Subsystem:  "broker",
-			Name:       "query_time",
-			Help:       "milliseconds taken to complete a query",
-			Objectives: map[float64]float64{0.5: 0.05, 0.9: 0.01, 0.99: 0.001},
-		}),
-		QueryBytes: prometheus.NewSummary(prometheus.SummaryOpts{
-			Namespace:  "druid",
-			Subsystem:  "broker",
-			Name:       "query_bytes",
-			Help:       "number of bytes returned in query response",
-			Objectives: map[float64]float64{0.5: 0.05, 0.9: 0.01, 0.99: 0.001},
-		}),
+		QueryTime: prometheus.NewHistogramVec(prometheus.HistogramOpts{
+			Namespace: "druid",
+			Subsystem: "broker",
+			Name:      "query_time",
+			Help:      "milliseconds taken to complete a query",
+			Buckets:   []float64{10, 100, 500, 1000, 2000, 3000, 5000, 7000, 10000},
+		}, []string{"dataSource"}),
+		QueryBytes: prometheus.NewHistogramVec(prometheus.HistogramOpts{
+			Namespace: "druid",
+			Subsystem: "broker",
+			Name:      "query_bytes",
+			Help:      "number of bytes returned in query response",
+			Buckets:   []float64{10, 100, 500, 1000, 2000, 3000, 5000, 7000, 10000},
+		}, []string{"dataSource"}),
 		QueryNodeTime: prometheus.NewSummary(prometheus.SummaryOpts{
 			Namespace:  "druid",
 			Subsystem:  "broker",
@@ -65,42 +65,30 @@ func NewQueryBrokerExporter() *QueryBrokerExporter {
 			Help:       "milliseconds that the channel to this process has spent suspended due to backpressure",
 			Objectives: map[float64]float64{0.5: 0.05, 0.9: 0.01, 0.99: 0.001},
 		}),
-		QueryCount: prometheus.NewCounter(prometheus.CounterOpts{
+		QueryCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "broker",
 			Name:      "query_count",
 			Help:      "number of total queries",
-			ConstLabels: prometheus.Labels{
-				"broker": "query-count",
-			},
-		}),
-		QuerySuccessCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		QuerySuccessCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "broker",
 			Name:      "query_success_count",
 			Help:      "number of queries successfully processed",
-			ConstLabels: prometheus.Labels{
-				"broker": "query-success-count",
-			},
-		}),
-		QueryFailedCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		QueryFailedCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "broker",
 			Name:      "query_failed_count",
 			Help:      "number of failed queries",
-			ConstLabels: prometheus.Labels{
-				"broker": "query-failed-count",
-			},
-		}),
-		QueryInterruptedCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		QueryInterruptedCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "broker",
 			Name:      "query_interrupted_count",
 			Help:      "number of queries interrupted due to cancellation or timeout",
-			ConstLabels: prometheus.Labels{
-				"broker": "query-interrupted-count",
-			},
-		}),
+		}, []string{}),
 		SQLQueryTime: prometheus.NewSummary(prometheus.SummaryOpts{
 			Namespace:  "druid",
 			Subsystem:  "broker",
@@ -135,13 +123,13 @@ func NewQueryBrokerExporter() *QueryBrokerExporter {
 }
 
 // SetQueryTime .
-func (bc *QueryBrokerExporter) SetQueryTime(val float64) {
-	bc.QueryTime.Observe(val)
+func (bc *QueryBrokerExporter) SetQueryTime(source string, val float64) {
+	bc.QueryTime.With(prometheus.Labels{"dataSource": source}).Observe(val)
 }
 
 // SetQueryBytes .
-func (bc *QueryBrokerExporter) SetQueryBytes(val float64) {
-	bc.QueryBytes.Observe(val)
+func (bc *QueryBrokerExporter) SetQueryBytes(source string, val float64) {
+	bc.QueryBytes.With(prometheus.Labels{"dataSource": source}).Observe(val)
 }
 
 // SetQueryNodeTime .
@@ -166,22 +154,22 @@ func (bc *QueryBrokerExporter) SetQueryNodeBackpressure(val float64) {
 
 // SetQueryCount .
 func (bc *QueryBrokerExporter) SetQueryCount(val float64) {
-	bc.QueryCount.Add(val)
+	bc.QueryCount.WithLabelValues().Add(val)
 }
 
 // SetQuerySuccessCount .
 func (bc *QueryBrokerExporter) SetQuerySuccessCount(val float64) {
-	bc.QuerySuccessCount.Add(val)
+	bc.QuerySuccessCount.WithLabelValues().Add(val)
 }
 
 // SetQueryFailedCount .
 func (bc *QueryBrokerExporter) SetQueryFailedCount(val float64) {
-	bc.QueryFailedCount.Add(val)
+	bc.QueryFailedCount.WithLabelValues().Add(val)
 }
 
 // SetQueryInterruptedCount .
 func (bc *QueryBrokerExporter) SetQueryInterruptedCount(val float64) {
-	bc.QueryInterruptedCount.Add(val)
+	bc.QueryInterruptedCount.WithLabelValues().Add(val)
 }
 
 // SetSQLQueryTime .

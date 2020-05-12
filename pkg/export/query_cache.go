@@ -4,30 +4,30 @@ import "github.com/prometheus/client_golang/prometheus"
 
 // QueryCacheExporter contains all the Prometheus metrics that are possible to gather from the tranquillity service
 type QueryCacheExporter struct {
-	DeltaNumEntries   prometheus.Counter `description:"number of cache entries (since last emission)"`
-	DeltaSizeBytes    prometheus.Counter `description:"size in bytes of cache entries (since last emission)"`
-	DeltaHits         prometheus.Counter `description:"number of cache hits (since last emission)"`
-	DeltaMisses       prometheus.Counter `description:"number of cache misses (since last emission)"`
-	DeltaEvictions    prometheus.Counter `description:"number of cache evictions (since last emission)"`
-	DeltaHitRate      prometheus.Counter `description:"cache hit rate (since last emission)"`
-	DeltaAverageBytes prometheus.Counter `description:"average cache entry byte size (since last emission)"`
-	DeltaTimeouts     prometheus.Counter `description:"number of cache timeouts (since last emission)"`
-	DeltaErrors       prometheus.Counter `description:"number of cache errors (since last emission)"`
-	DeltaPutOK        prometheus.Counter `description:"number of new cache entries successfully cached (since last emission)"`
-	DeltaPutError     prometheus.Counter `description:"number of new cache entries that could not be cached due to errors (since last emission)"`
-	DeltaPutOversized prometheus.Counter `description:"number of potential new cache entries that were skipped due to being too large (based on druid.{broker,historical,realtime}.cache.maxEntrySize properties) (since last emission)"`
-	TotalNumEntries   prometheus.Counter `description:"number of cache entries"`
-	TotalSizeBytes    prometheus.Counter `description:"size in bytes of cache entries"`
-	TotalHits         prometheus.Counter `description:"number of cache hits"`
-	TotalMisses       prometheus.Counter `description:"number of cache misses"`
-	TotalEvictions    prometheus.Counter `description:"number of cache evictions"`
-	TotalHitRate      prometheus.Counter `description:"cache hit rate"`
-	TotalAverageBytes prometheus.Counter `description:"average cache entry byte size"`
-	TotalTimeouts     prometheus.Counter `description:"number of cache timeouts"`
-	TotalErrors       prometheus.Counter `description:"number of cache errors"`
-	TotalPutOK        prometheus.Counter `description:"number of new cache entries successfully cached"`
-	TotalPutError     prometheus.Counter `description:"number of new cache entries that could not be cached due to errors"`
-	TotalPutOversized prometheus.Counter `description:"number of potential new cache entries that were skipped due to being too large (based on druid.{broker,historical,realtime}.cache.maxEntrySize properties)"`
+	DeltaNumEntries   *prometheus.GaugeVec `description:"number of cache entries (since last emission)"`
+	DeltaSizeBytes    *prometheus.GaugeVec `description:"size in bytes of cache entries (since last emission)"`
+	DeltaHits         *prometheus.GaugeVec `description:"number of cache hits (since last emission)"`
+	DeltaMisses       *prometheus.GaugeVec `description:"number of cache misses (since last emission)"`
+	DeltaEvictions    *prometheus.GaugeVec `description:"number of cache evictions (since last emission)"`
+	DeltaHitRate      prometheus.Counter   `description:"cache hit rate (since last emission)"`
+	DeltaAverageBytes prometheus.Counter   `description:"average cache entry byte size (since last emission)"`
+	DeltaTimeouts     *prometheus.GaugeVec `description:"number of cache timeouts (since last emission)"`
+	DeltaErrors       *prometheus.GaugeVec `description:"number of cache errors (since last emission)"`
+	DeltaPutOK        prometheus.Counter   `description:"number of new cache entries successfully cached (since last emission)"`
+	DeltaPutError     prometheus.Counter   `description:"number of new cache entries that could not be cached due to errors (since last emission)"`
+	DeltaPutOversized prometheus.Counter   `description:"number of potential new cache entries that were skipped due to being too large (based on druid.{broker,historical,realtime}.cache.maxEntrySize properties) (since last emission)"`
+	TotalNumEntries   *prometheus.GaugeVec `description:"number of cache entries"`
+	TotalSizeBytes    *prometheus.GaugeVec `description:"size in bytes of cache entries"`
+	TotalHits         *prometheus.GaugeVec `description:"number of cache hits"`
+	TotalMisses       *prometheus.GaugeVec `description:"number of cache misses"`
+	TotalEvictions    *prometheus.GaugeVec `description:"number of cache evictions"`
+	TotalHitRate      prometheus.Counter   `description:"cache hit rate"`
+	TotalAverageBytes prometheus.Counter   `description:"average cache entry byte size"`
+	TotalTimeouts     *prometheus.GaugeVec `description:"number of cache timeouts"`
+	TotalErrors       *prometheus.GaugeVec `description:"number of cache errors"`
+	TotalPutOK        prometheus.Counter   `description:"number of new cache entries successfully cached"`
+	TotalPutError     prometheus.Counter   `description:"number of new cache entries that could not be cached due to errors"`
+	TotalPutOversized prometheus.Counter   `description:"number of potential new cache entries that were skipped due to being too large (based on druid.{broker,historical,realtime}.cache.maxEntrySize properties)"`
 }
 
 // NewQueryCacheExporter returns a new Cache exporter object
@@ -42,24 +42,18 @@ func NewQueryCacheExporter() *QueryCacheExporter {
 				"cache": "delta-average-bytes",
 			},
 		}),
-		DeltaErrors: prometheus.NewCounter(prometheus.CounterOpts{
+		DeltaErrors: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
 			Name:      "delta_errors",
 			Help:      "number of cache errors (since last emission)",
-			ConstLabels: prometheus.Labels{
-				"cache": "delta-errors",
-			},
-		}),
-		DeltaEvictions: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		DeltaEvictions: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
 			Name:      "delta_evictions",
 			Help:      "number of cache evictions (since last emission)",
-			ConstLabels: prometheus.Labels{
-				"cache": "delta-evictions",
-			},
-		}),
+		}, []string{}),
 		DeltaHitRate: prometheus.NewCounter(prometheus.CounterOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
@@ -69,33 +63,24 @@ func NewQueryCacheExporter() *QueryCacheExporter {
 				"cache": "delta-hitrate",
 			},
 		}),
-		DeltaHits: prometheus.NewCounter(prometheus.CounterOpts{
+		DeltaHits: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
 			Name:      "delta_hits",
 			Help:      "number of cache hits (since last emission)",
-			ConstLabels: prometheus.Labels{
-				"cache": "delta-hits",
-			},
-		}),
-		DeltaMisses: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		DeltaMisses: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
 			Name:      "delta_misses",
 			Help:      "number of cache misses (since last emission)",
-			ConstLabels: prometheus.Labels{
-				"cache": "delta-misses",
-			},
-		}),
-		DeltaNumEntries: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		DeltaNumEntries: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
 			Name:      "delta_num_entries",
 			Help:      "number of cache entries (since last emission)",
-			ConstLabels: prometheus.Labels{
-				"cache": "delta-num-entries",
-			},
-		}),
+		}, []string{}),
 		DeltaPutError: prometheus.NewCounter(prometheus.CounterOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
@@ -123,24 +108,18 @@ func NewQueryCacheExporter() *QueryCacheExporter {
 				"cache": "delta-put-oversized",
 			},
 		}),
-		DeltaSizeBytes: prometheus.NewCounter(prometheus.CounterOpts{
+		DeltaSizeBytes: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
 			Name:      "delta_size_bytes",
 			Help:      "size in bytes of cache entries (since last emission)",
-			ConstLabels: prometheus.Labels{
-				"cache": "delta-size-bytes",
-			},
-		}),
-		DeltaTimeouts: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		DeltaTimeouts: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
 			Name:      "delta_timeouts",
 			Help:      "number of cache timeouts (since last emission)",
-			ConstLabels: prometheus.Labels{
-				"cache": "delta-timeouts",
-			},
-		}),
+		}, []string{}),
 		TotalAverageBytes: prometheus.NewCounter(prometheus.CounterOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
@@ -150,24 +129,18 @@ func NewQueryCacheExporter() *QueryCacheExporter {
 				"cache": "total-average-bytes",
 			},
 		}),
-		TotalErrors: prometheus.NewCounter(prometheus.CounterOpts{
+		TotalErrors: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
 			Name:      "total_errors",
 			Help:      "number of cache errors",
-			ConstLabels: prometheus.Labels{
-				"cache": "total-errors",
-			},
-		}),
-		TotalEvictions: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		TotalEvictions: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
 			Name:      "total_evictions",
 			Help:      "number of cache evictions",
-			ConstLabels: prometheus.Labels{
-				"cache": "total-evictions",
-			},
-		}),
+		}, []string{}),
 		TotalHitRate: prometheus.NewCounter(prometheus.CounterOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
@@ -177,33 +150,24 @@ func NewQueryCacheExporter() *QueryCacheExporter {
 				"cache": "total-hitrate",
 			},
 		}),
-		TotalHits: prometheus.NewCounter(prometheus.CounterOpts{
+		TotalHits: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
 			Name:      "total_hits",
 			Help:      "number of cache hits",
-			ConstLabels: prometheus.Labels{
-				"cache": "total-hits",
-			},
-		}),
-		TotalMisses: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		TotalMisses: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
 			Name:      "total_misses",
 			Help:      "number of cache misses",
-			ConstLabels: prometheus.Labels{
-				"cache": "total-misses",
-			},
-		}),
-		TotalNumEntries: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		TotalNumEntries: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
 			Name:      "total_num_entries",
 			Help:      "number of cache entries",
-			ConstLabels: prometheus.Labels{
-				"cache": "total-num-entries",
-			},
-		}),
+		}, []string{}),
 		TotalPutError: prometheus.NewCounter(prometheus.CounterOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
@@ -222,24 +186,18 @@ func NewQueryCacheExporter() *QueryCacheExporter {
 				"cache": "total-put-ok",
 			},
 		}),
-		TotalSizeBytes: prometheus.NewCounter(prometheus.CounterOpts{
+		TotalSizeBytes: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
 			Name:      "total_size_bytes",
 			Help:      "size in bytes of cache entries",
-			ConstLabels: prometheus.Labels{
-				"cache": "total-size-bytes",
-			},
-		}),
-		TotalTimeouts: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		TotalTimeouts: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
 			Name:      "total_timeouts",
 			Help:      "number of cache timeouts",
-			ConstLabels: prometheus.Labels{
-				"cache": "total-timeouts",
-			},
-		}),
+		}, []string{}),
 		TotalPutOversized: prometheus.NewCounter(prometheus.CounterOpts{
 			Namespace: "druid",
 			Subsystem: "cache",
@@ -256,27 +214,27 @@ func NewQueryCacheExporter() *QueryCacheExporter {
 
 // SetDeltaNumEntries .
 func (qc *QueryCacheExporter) SetDeltaNumEntries(val float64) {
-	qc.DeltaNumEntries.Add(val)
+	qc.DeltaNumEntries.WithLabelValues().Add(val)
 }
 
 // SetDeltaSizeBytes .
 func (qc *QueryCacheExporter) SetDeltaSizeBytes(val float64) {
-	qc.DeltaSizeBytes.Add(val)
+	qc.DeltaSizeBytes.WithLabelValues().Add(val)
 }
 
 // SetDeltaHits .
 func (qc *QueryCacheExporter) SetDeltaHits(val float64) {
-	qc.DeltaHits.Add(val)
+	qc.DeltaHits.WithLabelValues().Add(val)
 }
 
 // SetDeltaMisses .
 func (qc *QueryCacheExporter) SetDeltaMisses(val float64) {
-	qc.DeltaMisses.Add(val)
+	qc.DeltaMisses.WithLabelValues().Add(val)
 }
 
 // SetDeltaEvictions .
 func (qc *QueryCacheExporter) SetDeltaEvictions(val float64) {
-	qc.DeltaEvictions.Add(val)
+	qc.DeltaEvictions.WithLabelValues().Add(val)
 }
 
 // SetDeltaHitRate .
@@ -291,12 +249,12 @@ func (qc *QueryCacheExporter) SetDeltaAverageBytes(val float64) {
 
 // SetDeltaTimeouts .
 func (qc *QueryCacheExporter) SetDeltaTimeouts(val float64) {
-	qc.DeltaTimeouts.Add(val)
+	qc.DeltaTimeouts.WithLabelValues().Add(val)
 }
 
 // SetDeltaErrors .
 func (qc *QueryCacheExporter) SetDeltaErrors(val float64) {
-	qc.DeltaErrors.Add(val)
+	qc.DeltaErrors.WithLabelValues().Add(val)
 }
 
 // SetDeltaPutOK .
@@ -316,27 +274,27 @@ func (qc *QueryCacheExporter) SetDeltaPutOversized(val float64) {
 
 // SetTotalNumEntries .
 func (qc *QueryCacheExporter) SetTotalNumEntries(val float64) {
-	qc.TotalNumEntries.Add(val)
+	qc.TotalNumEntries.WithLabelValues().Add(val)
 }
 
 // SetTotalSizeBytes .
 func (qc *QueryCacheExporter) SetTotalSizeBytes(val float64) {
-	qc.TotalSizeBytes.Add(val)
+	qc.TotalSizeBytes.WithLabelValues().Add(val)
 }
 
 // SetTotalHits .
 func (qc *QueryCacheExporter) SetTotalHits(val float64) {
-	qc.TotalHits.Add(val)
+	qc.TotalHits.WithLabelValues().Add(val)
 }
 
 // SetTotalMisses .
 func (qc *QueryCacheExporter) SetTotalMisses(val float64) {
-	qc.TotalMisses.Add(val)
+	qc.TotalMisses.WithLabelValues().Add(val)
 }
 
 // SetTotalEvictions .
 func (qc *QueryCacheExporter) SetTotalEvictions(val float64) {
-	qc.TotalEvictions.Add(val)
+	qc.TotalEvictions.WithLabelValues().Add(val)
 }
 
 // SetTotalHitRate .
@@ -351,12 +309,12 @@ func (qc *QueryCacheExporter) SetTotalAverageBytes(val float64) {
 
 // SetTotalTimeouts .
 func (qc *QueryCacheExporter) SetTotalTimeouts(val float64) {
-	qc.TotalTimeouts.Add(val)
+	qc.TotalTimeouts.WithLabelValues().Add(val)
 }
 
 // SetTotalErrors .
 func (qc *QueryCacheExporter) SetTotalErrors(val float64) {
-	qc.TotalErrors.Add(val)
+	qc.TotalErrors.WithLabelValues().Add(val)
 }
 
 // SetTotalPutOK .

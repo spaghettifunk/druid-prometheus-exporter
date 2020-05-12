@@ -18,23 +18,66 @@ func (hf *Historical) Evaluate(f Feed) {
 	switch f.Metric {
 	case "query/time":
 		val, _ := f.Value.(float64)
-		hf.QueryHistoricalExporter.SetQueryTime(float64(val))
+		labels := map[string]string{
+			"dataSource":        f.DataSource,
+			"remoteAddress":     f.RemoteAddess,
+			"id":                f.ID,
+			"numMetrics":        f.Metric,
+			"type":              f.Type,
+			"interval":          f.Interval,
+			"hasFilters":        f.HasFilters,
+			"duration":          f.Duration,
+			"context":           f.Context,
+			"numComplexMetrics": f.NumComplexMetrics,
+			"numDimensions":     f.NumDimensions,
+			"threshold":         f.Threshold,
+			"dimension":         f.Dimension,
+		}
+		hf.QueryHistoricalExporter.SetQueryTime(labels, float64(val))
 		break
 	case "query/segment/time":
 		val, _ := f.Value.(float64)
-		hf.QueryHistoricalExporter.SetQuerySegmentTime(float64(val))
+		labels := map[string]string{
+			"id":      f.ID,
+			"status":  f.Status,
+			"segment": f.Segment,
+		}
+		hf.QueryHistoricalExporter.SetQuerySegmentTime(labels, float64(val))
 		break
 	case "query/wait/time":
 		val, _ := f.Value.(float64)
-		hf.QueryHistoricalExporter.SetQueryWaitTime(float64(val))
+		labels := map[string]string{
+			"id":      f.ID,
+			"segment": f.Segment,
+		}
+		hf.QueryHistoricalExporter.SetQueryWaitTime(labels, float64(val))
 		break
 	case "query/segmentAndCache/time":
 		val, _ := f.Value.(float64)
-		hf.QueryHistoricalExporter.SetQuerySegmentAndCacheTime(float64(val))
+		labels := map[string]string{
+			"id":      f.ID,
+			"segment": f.Segment,
+		}
+		hf.QueryHistoricalExporter.SetQuerySegmentAndCacheTime(labels, float64(val))
 		break
 	case "query/cpu/time":
 		val, _ := f.Value.(float64)
-		hf.QueryHistoricalExporter.SetQueryCPUTime(float64(val))
+		labels := map[string]string{
+			"dataSource":        f.DataSource,
+			"remoteAddress":     f.RemoteAddess,
+			"id":                f.ID,
+			"numMetrics":        f.Metric,
+			"type":              f.Type,
+			"interval":          f.Interval,
+			"hasFilters":        f.HasFilters,
+			"duration":          f.Duration,
+			"context":           f.Context,
+			"numComplexMetrics": f.NumComplexMetrics,
+			"numDimensions":     f.NumDimensions,
+			"threshold":         f.Threshold,
+			"dimension":         f.Dimension,
+		}
+		hf.QueryHistoricalExporter.SetQueryCPUTime(labels, float64(val))
 		break
 	case "query/count":
 		val, _ := f.Value.(float64)
@@ -65,50 +108,96 @@ func (hf *Historical) Evaluate(f Feed) {
 		hf.SQLExporter.SetSQLQueryBytes(float64(val))
 		break
 	case "query/cache/delta/numEntries":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetDeltaNumEntries(float64(val))
 		break
 	case "query/cache/delta/sizeBytes":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetDeltaSizeBytes(float64(val))
 		break
 	case "query/cache/delta/hits":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetDeltaHits(float64(val))
 		break
 	case "query/cache/delta/misses":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetDeltaMisses(float64(val))
 		break
 	case "query/cache/delta/evictions":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetDeltaEvictions(float64(val))
 		break
 	case "query/cache/delta/hitRate":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetDeltaHitRate(float64(val))
 		break
 	case "query/cache/delta/averageBytes":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetDeltaAverageBytes(float64(val))
 		break
 	case "query/cache/delta/timeouts":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetDeltaTimeouts(float64(val))
 		break
 	case "query/cache/delta/errors":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetDeltaErrors(float64(val))
 		break
 	case "query/cache/delta/put/ok":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetDeltaPutOK(float64(val))
 		break
 	case "query/cache/delta/put/error":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetDeltaPutError(float64(val))
 		break
 	case "query/cache/delta/put/oversized":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetDeltaPutOversized(float64(val))
 		break
 	case "query/cache/total/numEntries":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetTotalNumEntries(float64(val))
 		break
 	case "query/cache/total/sizeBytes":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetTotalSizeBytes(float64(val))
 		break
 	case "query/cache/total/hits":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetTotalHits(float64(val))
 		break
 	case "query/cache/total/misses":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetTotalMisses(float64(val))
 		break
 	case "query/cache/total/evictions":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetTotalEvictions(float64(val))
 		break
 	case "query/cache/total/hitRate":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetTotalHitRate(float64(val))
 		break
 	case "query/cache/total/averageBytes":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetTotalAverageBytes(float64(val))
 		break
 	case "query/cache/total/timeouts":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetTotalTimeouts(float64(val))
 		break
 	case "query/cache/total/errors":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetTotalErrors(float64(val))
 		break
 	case "query/cache/total/put/ok":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetTotalPutOK(float64(val))
 		break
 	case "query/cache/total/put/error":
+		val, _ := f.Value.(float64)
+		hf.QueryCacheExporter.SetTotalPutError(float64(val))
 		break
 	case "query/cache/total/put/oversized":
 		val, _ := f.Value.(float64)
