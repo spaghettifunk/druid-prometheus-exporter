@@ -4,141 +4,102 @@ import "github.com/prometheus/client_golang/prometheus"
 
 // HealthJVMExporter contains all the Prometheus metrics that are possible to gather from the Jetty service
 type HealthJVMExporter struct {
-	PoolCommitted      prometheus.Counter `description:"committed pool"`
-	PoolInit           prometheus.Counter `description:"initial pool"`
-	PoolMax            prometheus.Counter `description:"max pool"`
-	PoolUsed           prometheus.Counter `description:"pool used"`
-	BufferpoolCount    prometheus.Counter `description:"bufferpool count"`
-	BufferpoolUsed     prometheus.Counter `description:"bufferpool used"`
-	BufferpoolCapacity prometheus.Counter `description:"bufferpool capacity"`
-	MemInit            prometheus.Counter `description:"initial memory"`
-	MemMax             prometheus.Counter `description:"max memory"`
-	MemUsed            prometheus.Counter `description:"used memory"`
-	MemCommitted       prometheus.Counter `description:"committed memory"`
-	GCCount            prometheus.Counter `description:"garbage collection count"`
-	GCCPU              prometheus.Counter `description:"count of CPU time in Nanoseconds spent on garbage collection. Note: jvm/gc/cpu represents the total time over multiple GC cycles; divide by jvm/gc/count to get the mean GC time per cycle"`
+	PoolCommitted      *prometheus.GaugeVec `description:"committed pool"`
+	PoolInit           *prometheus.GaugeVec `description:"initial pool"`
+	PoolMax            *prometheus.GaugeVec `description:"max pool"`
+	PoolUsed           *prometheus.GaugeVec `description:"pool used"`
+	BufferpoolCount    *prometheus.GaugeVec `description:"bufferpool count"`
+	BufferpoolUsed     *prometheus.GaugeVec `description:"bufferpool used"`
+	BufferpoolCapacity *prometheus.GaugeVec `description:"bufferpool capacity"`
+	MemInit            *prometheus.GaugeVec `description:"initial memory"`
+	MemMax             *prometheus.GaugeVec `description:"max memory"`
+	MemUsed            *prometheus.GaugeVec `description:"used memory"`
+	MemCommitted       *prometheus.GaugeVec `description:"committed memory"`
+	GCCount            *prometheus.GaugeVec `description:"garbage collection count"`
+	GCCPU              *prometheus.GaugeVec `description:"count of CPU time in Nanoseconds spent on garbage collection. Note: jvm/gc/cpu represents the total time over multiple GC cycles; divide by jvm/gc/count to get the mean GC time per cycle"`
 }
 
 // NewHealthJVMExporter returns a new Jetty exporter object
 func NewHealthJVMExporter() *HealthJVMExporter {
 	qj := &HealthJVMExporter{
-		PoolCommitted: prometheus.NewCounter(prometheus.CounterOpts{
+		PoolCommitted: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "jvm",
 			Name:      "pool_committed",
 			Help:      "committed pool",
-			ConstLabels: prometheus.Labels{
-				"jvm": "pool-committed",
-			},
-		}),
-		PoolInit: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"poolKind", "poolName"}),
+		PoolInit: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "jvm",
 			Name:      "pool_init",
 			Help:      "initial pool",
-			ConstLabels: prometheus.Labels{
-				"jvm": "pool-init",
-			},
-		}),
-		PoolMax: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"poolKind", "poolName"}),
+		PoolMax: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "jvm",
 			Name:      "max_pool",
 			Help:      "max pool",
-			ConstLabels: prometheus.Labels{
-				"jvm": "max-pool",
-			},
-		}),
-		PoolUsed: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"poolKind", "poolName"}),
+		PoolUsed: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "jvm",
 			Name:      "pool_used",
 			Help:      "pool used",
-			ConstLabels: prometheus.Labels{
-				"jvm": "pool-used",
-			},
-		}),
-		BufferpoolCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"poolKind", "poolName"}),
+		BufferpoolCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "jvm",
 			Name:      "bufferpool_count",
 			Help:      "bufferpool count",
-			ConstLabels: prometheus.Labels{
-				"jvm": "bufferpool-count",
-			},
-		}),
-		BufferpoolUsed: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"bufferPoolName"}),
+		BufferpoolUsed: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "jvm",
 			Name:      "bufferpool_used",
 			Help:      "bufferpool used",
-			ConstLabels: prometheus.Labels{
-				"jvm": "bufferpool-used",
-			},
-		}),
-		BufferpoolCapacity: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"bufferPoolName"}),
+		BufferpoolCapacity: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "jvm",
 			Name:      "bufferpool_capacity",
 			Help:      "bufferpool capacity",
-			ConstLabels: prometheus.Labels{
-				"jvm": "bufferpool-used",
-			},
-		}),
-		MemInit: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"bufferPoolName"}),
+		MemInit: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "jvm",
 			Name:      "mem_init",
 			Help:      "initial memory",
-			ConstLabels: prometheus.Labels{
-				"jvm": "mem-init",
-			},
-		}),
-		MemMax: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"memKind"}),
+		MemMax: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "jvm",
 			Name:      "mem_max",
 			Help:      "max memory",
-			ConstLabels: prometheus.Labels{
-				"jvm": "mem-max",
-			},
-		}),
-		MemUsed: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"memKind"}),
+		MemUsed: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "jvm",
 			Name:      "mem_used",
 			Help:      "used memory",
-			ConstLabels: prometheus.Labels{
-				"jvm": "mem-used",
-			},
-		}),
-		MemCommitted: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"memKind"}),
+		MemCommitted: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "jvm",
 			Name:      "mem_committed",
 			Help:      "committed memory",
-			ConstLabels: prometheus.Labels{
-				"jvm": "mem-committed",
-			},
-		}),
-		GCCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"memKind"}),
+		GCCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "jvm",
 			Name:      "gc_count",
 			Help:      "garbage collection count",
-			ConstLabels: prometheus.Labels{
-				"jvm": "gc-count",
-			},
-		}),
-		GCCPU: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"gcName", "gcGen"}),
+		GCCPU: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "jvm",
 			Name:      "gc_cpu",
 			Help:      "count of CPU time in Nanoseconds spent on garbage collection. Note: jvm/gc/cpu represents the total time over multiple GC cycles; divide by jvm/gc/count to get the mean GC time per cycle",
-			ConstLabels: prometheus.Labels{
-				"jvm": "gc-cpu",
-			},
-		}),
+		}, []string{"gcName", "gcGen"}),
 	}
 
 	// register all the prometheus metrics
@@ -160,53 +121,66 @@ func NewHealthJVMExporter() *HealthJVMExporter {
 }
 
 // SetPoolCommited .
-func (hj *HealthJVMExporter) SetPoolCommited(val float64) {
+func (hj *HealthJVMExporter) SetPoolCommited(labels map[string]string, val float64) {
+	hj.PoolCommitted.With(labels).Add(val)
 }
 
 // SetPoolInit .
-func (hj *HealthJVMExporter) SetPoolInit(val float64) {
+func (hj *HealthJVMExporter) SetPoolInit(labels map[string]string, val float64) {
+	hj.PoolInit.With(labels).Add(val)
 }
 
 // SetPoolMax .
-func (hj *HealthJVMExporter) SetPoolMax(val float64) {
+func (hj *HealthJVMExporter) SetPoolMax(labels map[string]string, val float64) {
+	hj.PoolMax.With(labels).Add(val)
 }
 
 // SetPoolUsed .
-func (hj *HealthJVMExporter) SetPoolUsed(val float64) {
+func (hj *HealthJVMExporter) SetPoolUsed(labels map[string]string, val float64) {
+	hj.PoolUsed.With(labels).Add(val)
 }
 
 // SetBufferpoolCount .
-func (hj *HealthJVMExporter) SetBufferpoolCount(val float64) {
+func (hj *HealthJVMExporter) SetBufferpoolCount(labels map[string]string, val float64) {
+	hj.BufferpoolCount.With(labels).Add(val)
 }
 
 // SetBufferpoolUsed .
-func (hj *HealthJVMExporter) SetBufferpoolUsed(val float64) {
+func (hj *HealthJVMExporter) SetBufferpoolUsed(labels map[string]string, val float64) {
+	hj.BufferpoolUsed.With(labels).Add(val)
 }
 
 // SetBufferpoolCapacity .
-func (hj *HealthJVMExporter) SetBufferpoolCapacity(val float64) {
+func (hj *HealthJVMExporter) SetBufferpoolCapacity(labels map[string]string, val float64) {
+	hj.BufferpoolCapacity.With(labels).Add(val)
 }
 
 // SetMemInit .
-func (hj *HealthJVMExporter) SetMemInit(val float64) {
+func (hj *HealthJVMExporter) SetMemInit(labels map[string]string, val float64) {
+	hj.MemInit.With(labels).Add(val)
 }
 
 // SetMemMax .
-func (hj *HealthJVMExporter) SetMemMax(val float64) {
+func (hj *HealthJVMExporter) SetMemMax(labels map[string]string, val float64) {
+	hj.MemMax.With(labels).Add(val)
 }
 
 // SetMemUsed .
-func (hj *HealthJVMExporter) SetMemUsed(val float64) {
+func (hj *HealthJVMExporter) SetMemUsed(labels map[string]string, val float64) {
+	hj.MemUsed.With(labels).Add(val)
 }
 
 // SetMemCommitted .
-func (hj *HealthJVMExporter) SetMemCommitted(val float64) {
+func (hj *HealthJVMExporter) SetMemCommitted(labels map[string]string, val float64) {
+	hj.MemCommitted.With(labels).Add(val)
 }
 
 // SetGCCount .
-func (hj *HealthJVMExporter) SetGCCount(val float64) {
+func (hj *HealthJVMExporter) SetGCCount(labels map[string]string, val float64) {
+	hj.GCCount.With(labels).Add(val)
 }
 
 // SetGCCPU .
-func (hj *HealthJVMExporter) SetGCCPU(val float64) {
+func (hj *HealthJVMExporter) SetGCCPU(labels map[string]string, val float64) {
+	hj.GCCPU.With(labels).Add(val)
 }

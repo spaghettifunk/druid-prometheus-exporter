@@ -1,6 +1,10 @@
 package feed
 
-import "github.com/spaghettifunk/druid-prometheus-exporter/pkg/export"
+import (
+	"strings"
+
+	"github.com/spaghettifunk/druid-prometheus-exporter/pkg/export"
+)
 
 // Historical initiate the metrics for the historical feeds
 type Historical struct {
@@ -205,55 +209,100 @@ func (hf *Historical) Evaluate(f Feed) {
 		break
 	case "jvm/pool/committed":
 		val, _ := f.Value.(float64)
-		hf.HealthJVMExporter.SetPoolCommited(float64(val))
+		labels := map[string]string{
+			"poolKind": f.PoolKind,
+			"poolName": f.PoolName,
+		}
+		hf.HealthJVMExporter.SetPoolCommited(labels, float64(val))
 		break
 	case "jvm/pool/init":
 		val, _ := f.Value.(float64)
-		hf.HealthJVMExporter.SetPoolInit(float64(val))
+		labels := map[string]string{
+			"poolKind": f.PoolKind,
+			"poolName": f.PoolName,
+		}
+		hf.HealthJVMExporter.SetPoolInit(labels, float64(val))
 		break
 	case "jvm/pool/max":
 		val, _ := f.Value.(float64)
-		hf.HealthJVMExporter.SetPoolMax(float64(val))
+		labels := map[string]string{
+			"poolKind": f.PoolKind,
+			"poolName": f.PoolName,
+		}
+		hf.HealthJVMExporter.SetPoolMax(labels, float64(val))
 		break
 	case "jvm/pool/used":
 		val, _ := f.Value.(float64)
-		hf.HealthJVMExporter.SetPoolUsed(float64(val))
+		labels := map[string]string{
+			"poolKind": f.PoolKind,
+			"poolName": f.PoolName,
+		}
+		hf.HealthJVMExporter.SetPoolUsed(labels, float64(val))
 		break
 	case "jvm/bufferpool/count":
 		val, _ := f.Value.(float64)
-		hf.HealthJVMExporter.SetBufferpoolCount(float64(val))
+		labels := map[string]string{
+			"bufferPoolName": f.BufferPoolName,
+		}
+		hf.HealthJVMExporter.SetBufferpoolCount(labels, float64(val))
 		break
 	case "jvm/bufferpool/used":
 		val, _ := f.Value.(float64)
-		hf.HealthJVMExporter.SetBufferpoolUsed(float64(val))
+		labels := map[string]string{
+			"bufferPoolName": f.BufferPoolName,
+		}
+		hf.HealthJVMExporter.SetBufferpoolUsed(labels, float64(val))
 		break
 	case "jvm/bufferpool/capacity":
 		val, _ := f.Value.(float64)
-		hf.HealthJVMExporter.SetBufferpoolCapacity(float64(val))
+		labels := map[string]string{
+			"bufferPoolName": f.BufferPoolName,
+		}
+		hf.HealthJVMExporter.SetBufferpoolCapacity(labels, float64(val))
 		break
 	case "jvm/mem/init":
 		val, _ := f.Value.(float64)
-		hf.HealthJVMExporter.SetMemInit(float64(val))
+		labels := map[string]string{
+			"memKind": f.MemKind,
+		}
+		hf.HealthJVMExporter.SetMemInit(labels, float64(val))
 		break
 	case "jvm/mem/max":
 		val, _ := f.Value.(float64)
-		hf.HealthJVMExporter.SetMemMax(float64(val))
+		labels := map[string]string{
+			"memKind": f.MemKind,
+		}
+		hf.HealthJVMExporter.SetMemMax(labels, float64(val))
 		break
 	case "jvm/mem/used":
 		val, _ := f.Value.(float64)
-		hf.HealthJVMExporter.SetMemUsed(float64(val))
+		labels := map[string]string{
+			"memKind": f.MemKind,
+		}
+		hf.HealthJVMExporter.SetMemUsed(labels, float64(val))
 		break
 	case "jvm/mem/committed":
 		val, _ := f.Value.(float64)
-		hf.HealthJVMExporter.SetMemCommitted(float64(val))
+		labels := map[string]string{
+			"memKind": f.MemKind,
+		}
+		hf.HealthJVMExporter.SetMemCommitted(labels, float64(val))
 		break
 	case "jvm/gc/count":
 		val, _ := f.Value.(float64)
-		hf.HealthJVMExporter.SetGCCount(float64(val))
+		labels := map[string]string{
+			"gcName": strings.Join(f.GCName, ","),
+			"gcGen":  strings.Join(f.GCGen, ","),
+		}
+		hf.HealthJVMExporter.SetGCCount(labels, float64(val))
 		break
 	case "jvm/gc/cpu":
 		val, _ := f.Value.(float64)
-		hf.HealthJVMExporter.SetGCCPU(float64(val))
+		labels := map[string]string{
+			"gcName": strings.Join(f.GCName, ","),
+			"gcGen":  strings.Join(f.GCGen, ","),
+		}
+		hf.HealthJVMExporter.SetGCCPU(labels, float64(val))
 		break
 	case "jetty/numOpenConnections":
 		val, _ := f.Value.(float64)
