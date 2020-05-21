@@ -8,7 +8,6 @@ volumes:
   coordinator_var: {}
   router_var: {}
 
-
 services:
   postgres:
     container_name: postgres
@@ -111,11 +110,11 @@ services:
     env_file:
       - ./config/common
 
-  # exporter:
-  #   container_name: exporter
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   command: server
-  #   ports:
-  #     - "7000:7000"
+  exporter:
+    container_name: exporter
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: server
+    ports:
+      - "7000:7000"

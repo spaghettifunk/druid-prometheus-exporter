@@ -103,8 +103,8 @@ func NewIngestionRealtimeExporter() *IngestionRealtimeExporter {
 		HandOffCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "realtime",
-			Name:      "ingest_handoff_failed_count",
-			Help:      "number of times handoff failed",
+			Name:      "ingest_handoff_count",
+			Help:      "number of times handoff count",
 		}, []string{"dataSource", "taskId"}),
 		MergeTime: prometheus.NewHistogramVec(prometheus.HistogramOpts{
 			Namespace: "druid",
