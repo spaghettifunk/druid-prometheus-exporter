@@ -31,7 +31,7 @@ func DruidCollectMetrics(c *gin.Context) {
 			break
 		case "druid/coordinator":
 			sf = &feed.Coordinator{
-				CoordinationExporter: nil,
+				CoordinationExporter: c.MustGet("CoordinationExporter").(*export.CoordinationExporter),
 				HealthJVMExporter:    c.MustGet("HealthJVMExporter").(*export.HealthJVMExporter),
 				QueryJettyExporter:   c.MustGet("QueryJettyExporter").(*export.QueryJettyExporter),
 			}
