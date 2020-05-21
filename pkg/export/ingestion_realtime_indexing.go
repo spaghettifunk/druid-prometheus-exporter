@@ -19,7 +19,7 @@ type IngestionRealtimeIndexingExporter struct {
 
 // NewIngestionRealtimeIndexingExporter returns a new Jetty exporter object
 func NewIngestionRealtimeIndexingExporter() *IngestionRealtimeIndexingExporter {
-	qj := &IngestionRealtimeIndexingExporter{
+	re := &IngestionRealtimeIndexingExporter{
 		TaskRunTime: prometheus.NewHistogramVec(prometheus.HistogramOpts{
 			Namespace: "druid",
 			Subsystem: "realtime_indexing",
@@ -93,7 +93,21 @@ func NewIngestionRealtimeIndexingExporter() *IngestionRealtimeIndexingExporter {
 			Help:      "number of current waiting tasks. This metric is only available if the TaskCountStatsMonitor module is included",
 		}, []string{"dataSource"}),
 	}
-	return qj
+
+	// register all the prometheus metrics
+	prometheus.MustRegister(re.SegmentAddedBytes)
+	prometheus.MustRegister(re.SegmentMovedBytes)
+	prometheus.MustRegister(re.SegmentNukedBytes)
+	prometheus.MustRegister(re.TaskActionLogTime)
+	prometheus.MustRegister(re.TaskActionRunTime)
+	prometheus.MustRegister(re.TaskFailedCount)
+	prometheus.MustRegister(re.TaskPendingCount)
+	prometheus.MustRegister(re.TaskWaitingCount)
+	prometheus.MustRegister(re.TaskSuccessCount)
+	prometheus.MustRegister(re.TaskRunningCount)
+	prometheus.MustRegister(re.TaskRunTime)
+
+	return re
 }
 
 // SetTaskRunTime .

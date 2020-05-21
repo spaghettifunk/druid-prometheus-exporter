@@ -21,7 +21,7 @@ type HealthJVMExporter struct {
 
 // NewHealthJVMExporter returns a new Jetty exporter object
 func NewHealthJVMExporter() *HealthJVMExporter {
-	qj := &HealthJVMExporter{
+	hj := &HealthJVMExporter{
 		PoolCommitted: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "jvm",
@@ -103,21 +103,21 @@ func NewHealthJVMExporter() *HealthJVMExporter {
 	}
 
 	// register all the prometheus metrics
-	prometheus.MustRegister(qj.PoolCommitted)
-	prometheus.MustRegister(qj.PoolInit)
-	prometheus.MustRegister(qj.PoolMax)
-	prometheus.MustRegister(qj.PoolUsed)
-	prometheus.MustRegister(qj.BufferpoolCount)
-	prometheus.MustRegister(qj.BufferpoolUsed)
-	prometheus.MustRegister(qj.BufferpoolCapacity)
-	prometheus.MustRegister(qj.MemInit)
-	prometheus.MustRegister(qj.MemMax)
-	prometheus.MustRegister(qj.MemUsed)
-	prometheus.MustRegister(qj.MemCommitted)
-	prometheus.MustRegister(qj.GCCount)
-	prometheus.MustRegister(qj.GCCPU)
+	prometheus.MustRegister(hj.PoolCommitted)
+	prometheus.MustRegister(hj.PoolInit)
+	prometheus.MustRegister(hj.PoolMax)
+	prometheus.MustRegister(hj.PoolUsed)
+	prometheus.MustRegister(hj.BufferpoolCount)
+	prometheus.MustRegister(hj.BufferpoolUsed)
+	prometheus.MustRegister(hj.BufferpoolCapacity)
+	prometheus.MustRegister(hj.MemInit)
+	prometheus.MustRegister(hj.MemMax)
+	prometheus.MustRegister(hj.MemUsed)
+	prometheus.MustRegister(hj.MemCommitted)
+	prometheus.MustRegister(hj.GCCount)
+	prometheus.MustRegister(hj.GCCPU)
 
-	return qj
+	return hj
 }
 
 // SetPoolCommited .

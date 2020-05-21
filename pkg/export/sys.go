@@ -24,7 +24,7 @@ type SysExporter struct {
 
 // NewSysExporter returns a new Jetty exporter object
 func NewSysExporter() *SysExporter {
-	qj := &SysExporter{
+	se := &SysExporter{
 		SwapFree: prometheus.NewCounter(prometheus.CounterOpts{
 			Namespace: "druid",
 			Subsystem: "sys",
@@ -172,24 +172,24 @@ func NewSysExporter() *SysExporter {
 	}
 
 	// register all the prometheus metrics
-	prometheus.MustRegister(qj.SwapFree)
-	prometheus.MustRegister(qj.SwapMax)
-	prometheus.MustRegister(qj.SwapPageIn)
-	prometheus.MustRegister(qj.SwapPageOut)
-	prometheus.MustRegister(qj.DiskWriteCount)
-	prometheus.MustRegister(qj.DiskReadCount)
-	prometheus.MustRegister(qj.DiskWriteSize)
-	prometheus.MustRegister(qj.DiskReadSize)
-	prometheus.MustRegister(qj.NetWriteSize)
-	prometheus.MustRegister(qj.NetReadSize)
-	prometheus.MustRegister(qj.FSUsed)
-	prometheus.MustRegister(qj.FSMax)
-	prometheus.MustRegister(qj.MemUsed)
-	prometheus.MustRegister(qj.MemMax)
-	prometheus.MustRegister(qj.StorageUsed)
-	prometheus.MustRegister(qj.CPU)
+	prometheus.MustRegister(se.SwapFree)
+	prometheus.MustRegister(se.SwapMax)
+	prometheus.MustRegister(se.SwapPageIn)
+	prometheus.MustRegister(se.SwapPageOut)
+	prometheus.MustRegister(se.DiskWriteCount)
+	prometheus.MustRegister(se.DiskReadCount)
+	prometheus.MustRegister(se.DiskWriteSize)
+	prometheus.MustRegister(se.DiskReadSize)
+	prometheus.MustRegister(se.NetWriteSize)
+	prometheus.MustRegister(se.NetReadSize)
+	prometheus.MustRegister(se.FSUsed)
+	prometheus.MustRegister(se.FSMax)
+	prometheus.MustRegister(se.MemUsed)
+	prometheus.MustRegister(se.MemMax)
+	prometheus.MustRegister(se.StorageUsed)
+	prometheus.MustRegister(se.CPU)
 
-	return qj
+	return se
 }
 
 // SetSwapFree .

@@ -10,7 +10,7 @@ type SQLExporter struct {
 
 // NewSQLExporter returns a new SQL exporter object
 func NewSQLExporter() *SQLExporter {
-	qj := &SQLExporter{
+	se := &SQLExporter{
 		SQLQueryTime: prometheus.NewSummary(prometheus.SummaryOpts{
 			Namespace:  "druid",
 			Subsystem:  "sql",
@@ -28,10 +28,10 @@ func NewSQLExporter() *SQLExporter {
 	}
 
 	// register the prometheus metrics
-	prometheus.MustRegister(qj.SQLQueryTime)
-	prometheus.MustRegister(qj.SQLQueryBytes)
+	prometheus.MustRegister(se.SQLQueryTime)
+	prometheus.MustRegister(se.SQLQueryBytes)
 
-	return qj
+	return se
 }
 
 // SetSQLQueryTime .

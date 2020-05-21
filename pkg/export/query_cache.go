@@ -209,6 +209,32 @@ func NewQueryCacheExporter() *QueryCacheExporter {
 		}),
 	}
 
+	// register all the prometheus metrics
+	prometheus.MustRegister(qc.DeltaNumEntries)
+	prometheus.MustRegister(qc.DeltaSizeBytes)
+	prometheus.MustRegister(qc.DeltaHits)
+	prometheus.MustRegister(qc.DeltaMisses)
+	prometheus.MustRegister(qc.DeltaEvictions)
+	prometheus.MustRegister(qc.DeltaHitRate)
+	prometheus.MustRegister(qc.DeltaAverageBytes)
+	prometheus.MustRegister(qc.DeltaTimeouts)
+	prometheus.MustRegister(qc.DeltaErrors)
+	prometheus.MustRegister(qc.DeltaPutOK)
+	prometheus.MustRegister(qc.DeltaPutError)
+	prometheus.MustRegister(qc.DeltaPutOversized)
+	prometheus.MustRegister(qc.TotalNumEntries)
+	prometheus.MustRegister(qc.TotalSizeBytes)
+	prometheus.MustRegister(qc.TotalHits)
+	prometheus.MustRegister(qc.TotalMisses)
+	prometheus.MustRegister(qc.TotalEvictions)
+	prometheus.MustRegister(qc.TotalHitRate)
+	prometheus.MustRegister(qc.TotalAverageBytes)
+	prometheus.MustRegister(qc.TotalTimeouts)
+	prometheus.MustRegister(qc.TotalErrors)
+	prometheus.MustRegister(qc.TotalPutOK)
+	prometheus.MustRegister(qc.TotalPutError)
+	prometheus.MustRegister(qc.TotalPutOversized)
+
 	return qc
 }
 

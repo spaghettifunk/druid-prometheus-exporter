@@ -11,7 +11,7 @@ type IngestionKafkaExporter struct {
 
 // NewIngestionKafkaExporter returns a new Jetty exporter object
 func NewIngestionKafkaExporter() *IngestionKafkaExporter {
-	qj := &IngestionKafkaExporter{
+	ik := &IngestionKafkaExporter{
 		Lag: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "realtime",
@@ -31,7 +31,13 @@ func NewIngestionKafkaExporter() *IngestionKafkaExporter {
 			Help:      "average lag between the offsets consumed by the Kafka indexing tasks and latest offsets in Kafka brokers across all partitions. Minimum emission period for this metric is a minute",
 		}, []string{"dataSource"}),
 	}
-	return qj
+
+	// register all the prometheus metrics
+	prometheus.MustRegister(ik.Lag)
+	prometheus.MustRegister(ik.MaxLag)
+	prometheus.MustRegister(ik.AVGLag)
+
+	return ik
 }
 
 // SetLag .

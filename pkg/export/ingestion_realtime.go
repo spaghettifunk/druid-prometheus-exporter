@@ -24,7 +24,7 @@ type IngestionRealtimeExporter struct {
 
 // NewIngestionRealtimeExporter returns a new Jetty exporter object
 func NewIngestionRealtimeExporter() *IngestionRealtimeExporter {
-	qj := &IngestionRealtimeExporter{
+	re := &IngestionRealtimeExporter{
 		EventsThrownAway: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "realtime",
@@ -127,7 +127,26 @@ func NewIngestionRealtimeExporter() *IngestionRealtimeExporter {
 			Help:      "number of sinks not handoffed",
 		}, []string{"dataSource", "taskId"}),
 	}
-	return qj
+
+	// register all the prometheus metrics
+	prometheus.MustRegister(re.EventsThrownAway)
+	prometheus.MustRegister(re.EventsUnparsable)
+	prometheus.MustRegister(re.EventsDuplicate)
+	prometheus.MustRegister(re.EventsProcessed)
+	prometheus.MustRegister(re.EventsMessageGap)
+	prometheus.MustRegister(re.RowsOutput)
+	prometheus.MustRegister(re.PersistsCount)
+	prometheus.MustRegister(re.PersistsCPU)
+	prometheus.MustRegister(re.PersistsTime)
+	prometheus.MustRegister(re.PersistsBackPressure)
+	prometheus.MustRegister(re.PersistsFailed)
+	prometheus.MustRegister(re.HandOffFailed)
+	prometheus.MustRegister(re.HandOffCount)
+	prometheus.MustRegister(re.MergeTime)
+	prometheus.MustRegister(re.MergeCPU)
+	prometheus.MustRegister(re.SinkCount)
+
+	return re
 }
 
 // SetEventsThrownAway .

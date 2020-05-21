@@ -8,5 +8,7 @@ type QueryRealtimeExporter struct {
 func NewQueryRealtimeExporter() *QueryRealtimeExporter {
 	qr := &QueryRealtimeExporter{}
 
+	// register all the prometheus metrics
+
 	return qr
 }
