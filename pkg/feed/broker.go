@@ -186,50 +186,96 @@ func (bf *Broker) Evaluate(f Feed) {
 		bf.QueryJettyExporter.SetNumOpenConnections(float64(val))
 		break
 	case "query/cache/delta/numEntries":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetDeltaNumEntries(float64(val))
 		break
 	case "query/cache/delta/sizeBytes":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetDeltaSizeBytes(float64(val))
 		break
 	case "query/cache/delta/hits":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetDeltaHits(float64(val))
 		break
 	case "query/cache/delta/misses":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetDeltaMisses(float64(val))
 		break
 	case "query/cache/delta/evictions":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetDeltaEvictions(float64(val))
 		break
 	case "query/cache/delta/hitRate":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetDeltaHitRate(float64(val))
 		break
 	case "query/cache/delta/averageBytes":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetDeltaAverageBytes(float64(val))
 		break
 	case "query/cache/delta/timeouts":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetDeltaTimeouts(float64(val))
 		break
 	case "query/cache/delta/errors":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetDeltaErrors(float64(val))
 		break
 	case "query/cache/delta/put/ok":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetDeltaPutOK(float64(val))
 		break
 	case "query/cache/delta/put/error":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetDeltaPutError(float64(val))
 		break
 	case "query/cache/delta/put/oversized":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetDeltaPutOversized(float64(val))
 		break
 	case "query/cache/total/numEntries":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetTotalNumEntries(float64(val))
 		break
 	case "query/cache/total/sizeBytes":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetTotalSizeBytes(float64(val))
 		break
 	case "query/cache/total/hits":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetTotalHits(float64(val))
 		break
 	case "query/cache/total/misses":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetTotalMisses(float64(val))
 		break
 	case "query/cache/total/evictions":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetTotalEvictions(float64(val))
 		break
 	case "query/cache/total/hitRate":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetTotalHitRate(float64(val))
 		break
 	case "query/cache/total/averageBytes":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetTotalAverageBytes(float64(val))
 		break
 	case "query/cache/total/timeouts":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetTotalTimeouts(float64(val))
 		break
 	case "query/cache/total/errors":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetTotalErrors(float64(val))
 		break
 	case "query/cache/total/put/ok":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetTotalPutOK(float64(val))
 		break
 	case "query/cache/total/put/error":
+		val, _ := f.Value.(float64)
+		bf.QueryCacheExporter.SetTotalPutError(float64(val))
 		break
 	case "query/cache/total/put/oversized":
 		val, _ := f.Value.(float64)

@@ -4,221 +4,158 @@ import "github.com/prometheus/client_golang/prometheus"
 
 // CoordinationExporter contains all the Prometheus metrics that are possible to gather from the Jetty service
 type CoordinationExporter struct {
-	TierTotalCapacity           prometheus.Counter `description:"Total capacity in bytes available in each tier."`
-	TierRequiredCapacity        prometheus.Counter `description:"Total capacity in bytes required in each tier."`
-	TierReplicationFactor       prometheus.Counter `description:"Configured maximum replication factor in each tier."`
-	TierHistoricalCount         prometheus.Counter `description:"Number of available historical nodes in each tier."`
-	SegmentUnderReplicatedCount prometheus.Counter `description:"Number of segments (including replicas) left to load until segments that should be loaded in the cluster are available for queries."`
-	SegmentUnavailableCount     prometheus.Counter `description:"Number of segments (not including replicas) left to load until segments that should be loaded in the cluster are available for queries."`
-	SegmentOvershadowedCount    prometheus.Counter `description:"Number of overshadowed segments."`
-	SegmentCount                prometheus.Counter `description:"Number of used segments belonging to a data source. Emitted only for data sources to which at least one used segment belongs."`
-	SegmentSize                 prometheus.Counter `description:"Total size of used segments in a data source. Emitted only for data sources to which at least one used segment belongs."`
-	SegmentDropQueueCount       prometheus.Counter `description:"Number of segments to drop."`
-	SegmentLoadQueueCount       prometheus.Counter `description:"Number of segments to load."`
-	SegmentLoadQueueFailed      prometheus.Counter `description:"Number of segments that failed to load."`
-	SegmentLoadQueueSize        prometheus.Counter `description:"Size in bytes of segments to load.	"`
-	SegmentCostNormalized       prometheus.Counter `description:"Used in cost balancing. The normalized cost of hosting segments."`
-	SegmentCostNormalization    prometheus.Counter `description:"Used in cost balancing. The normalization of hosting segments."`
-	SegmentCostRaw              prometheus.Counter `description:"Used in cost balancing. The raw cost of hosting segments."`
-	SegmentUnneededCount        prometheus.Counter `description:"Number of segments dropped due to being marked as unused."`
-	SegmentDeletedCount         prometheus.Counter `description:"Number of segments dropped due to rules."`
-	SegmentDroppedCount         prometheus.Counter `description:"Number of segments dropped due to being overshadowed."`
-	SegmentMovedCount           prometheus.Counter `description:"Number of segments moved in the cluster."`
-	SegmentAssignedCount        prometheus.Counter `description:"number of segments assigned to be loaded in the cluster"`
+	TierTotalCapacity           *prometheus.GaugeVec `description:"Total capacity in bytes available in each tier."`
+	TierRequiredCapacity        *prometheus.GaugeVec `description:"Total capacity in bytes required in each tier."`
+	TierReplicationFactor       *prometheus.GaugeVec `description:"Configured maximum replication factor in each tier."`
+	TierHistoricalCount         *prometheus.GaugeVec `description:"Number of available historical nodes in each tier."`
+	SegmentUnderReplicatedCount *prometheus.GaugeVec `description:"Number of segments (including replicas) left to load until segments that should be loaded in the cluster are available for queries."`
+	SegmentUnavailableCount     *prometheus.GaugeVec `description:"Number of segments (not including replicas) left to load until segments that should be loaded in the cluster are available for queries."`
+	SegmentOvershadowedCount    *prometheus.GaugeVec `description:"Number of overshadowed segments."`
+	SegmentCount                *prometheus.GaugeVec `description:"Number of used segments belonging to a data source. Emitted only for data sources to which at least one used segment belongs."`
+	SegmentSize                 *prometheus.GaugeVec `description:"Total size of used segments in a data source. Emitted only for data sources to which at least one used segment belongs."`
+	SegmentDropQueueCount       *prometheus.GaugeVec `description:"Number of segments to drop."`
+	SegmentLoadQueueCount       *prometheus.GaugeVec `description:"Number of segments to load."`
+	SegmentLoadQueueFailed      *prometheus.GaugeVec `description:"Number of segments that failed to load."`
+	SegmentLoadQueueSize        *prometheus.GaugeVec `description:"Size in bytes of segments to load.	"`
+	SegmentCostNormalized       *prometheus.GaugeVec `description:"Used in cost balancing. The normalized cost of hosting segments."`
+	SegmentCostNormalization    *prometheus.GaugeVec `description:"Used in cost balancing. The normalization of hosting segments."`
+	SegmentCostRaw              *prometheus.GaugeVec `description:"Used in cost balancing. The raw cost of hosting segments."`
+	SegmentUnneededCount        *prometheus.GaugeVec `description:"Number of segments dropped due to being marked as unused."`
+	SegmentDeletedCount         *prometheus.GaugeVec `description:"Number of segments dropped due to rules."`
+	SegmentDroppedCount         *prometheus.GaugeVec `description:"Number of segments dropped due to being overshadowed."`
+	SegmentMovedCount           *prometheus.GaugeVec `description:"Number of segments moved in the cluster."`
+	SegmentAssignedCount        *prometheus.GaugeVec `description:"number of segments assigned to be loaded in the cluster"`
 }
 
 // NewCoordinationExporter returns a new Jetty exporter object
 func NewCoordinationExporter() *CoordinationExporter {
 	ce := &CoordinationExporter{
-		TierTotalCapacity: prometheus.NewCounter(prometheus.CounterOpts{
+		TierTotalCapacity: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "tier_total_capacity",
 			Help:      "Total capacity in bytes available in each tier.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "tier-total-capacity",
-			},
-		}),
-		TierRequiredCapacity: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"tier"}),
+		TierRequiredCapacity: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "tier_required_capacity",
 			Help:      "Total capacity in bytes required in each tier.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "tier-required-capacity",
-			},
-		}),
-		TierHistoricalCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"tier"}),
+		TierHistoricalCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "tier_historical_count",
 			Help:      "Number of available historical nodes in each tier.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "tier-historical-count",
-			},
-		}),
-		TierReplicationFactor: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"tier"}),
+		TierReplicationFactor: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "tier_replication_factor",
 			Help:      "Configured maximum replication factor in each tier.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "tier-replication-factor",
-			},
-		}),
-		SegmentCostNormalization: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"tier"}),
+		SegmentCostNormalization: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_cost_normalization",
 			Help:      "Used in cost balancing. The normalization of hosting segments.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-cost-normalization",
-			},
-		}),
-		SegmentCostNormalized: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"tier"}),
+		SegmentCostNormalized: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_cost_normalized",
 			Help:      "Used in cost balancing. The normalized cost of hosting segments.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-cost-normalized",
-			},
-		}),
-		SegmentCostRaw: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"tier"}),
+		SegmentCostRaw: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_cost_raw",
 			Help:      "Used in cost balancing. The raw cost of hosting segments.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-cost-raw",
-			},
-		}),
-		SegmentCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"tier"}),
+		SegmentCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_count",
 			Help:      "Number of used segments belonging to a data source. Emitted only for data sources to which at least one used segment belongs.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-count",
-			},
-		}),
-		SegmentDeletedCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"dataSource"}),
+		SegmentDeletedCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_deleted_count",
 			Help:      "Number of segments dropped due to rules.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-deleted-count",
-			},
-		}),
-		SegmentDropQueueCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"tier"}),
+		SegmentDropQueueCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_drop_queue_count",
 			Help:      "Number of segments to drop.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-drop-queue-count",
-			},
-		}),
-		SegmentDroppedCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"server"}),
+		SegmentDroppedCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_dropped_count",
 			Help:      "Number of segments dropped due to being overshadowed.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-dropped-count",
-			},
-		}),
-		SegmentLoadQueueCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"tier"}),
+		SegmentLoadQueueCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_load_queue_count",
 			Help:      "Number of segments to load.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-load-queue-count",
-			},
-		}),
-		SegmentLoadQueueFailed: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"server"}),
+		SegmentLoadQueueFailed: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_load_queue_failed",
 			Help:      "Number of segments that failed to load.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-load-queue-failed",
-			},
-		}),
-		SegmentLoadQueueSize: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"server"}),
+		SegmentLoadQueueSize: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_load_queue_size",
 			Help:      "Size in bytes of segments to load",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-load-queue-size",
-			},
-		}),
-		SegmentMovedCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"server"}),
+		SegmentMovedCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_moved_count",
 			Help:      "Number of segments moved in the cluster.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-moved-count",
-			},
-		}),
-		SegmentOvershadowedCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"tier"}),
+		SegmentOvershadowedCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_overshadowed_count",
 			Help:      "Number of overshadowed segments.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-overshadowed-count",
-			},
-		}),
-		SegmentSize: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{}),
+		SegmentSize: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_size",
 			Help:      "Total size of used segments in a data source. Emitted only for data sources to which at least one used segment belongs.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-size",
-			},
-		}),
-		SegmentUnavailableCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"dataSource"}),
+		SegmentUnavailableCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_unavailable_count",
 			Help:      "Number of segments (not including replicas) left to load until segments that should be loaded in the cluster are available for queries.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-unavailable-count",
-			},
-		}),
-		SegmentUnderReplicatedCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"dataSource"}),
+		SegmentUnderReplicatedCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_underreplicated_count",
 			Help:      "Number of segments (including replicas) left to load until segments that should be loaded in the cluster are available for queries.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-underreplicated-count",
-			},
-		}),
-		SegmentUnneededCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"tier", "dataSource"}),
+		SegmentUnneededCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_unneeded_count",
 			Help:      "Number of segments dropped due to being marked as unused.",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-unneeded-count",
-			},
-		}),
-		SegmentAssignedCount: prometheus.NewCounter(prometheus.CounterOpts{
+		}, []string{"tier"}),
+		SegmentAssignedCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "coordinator",
 			Name:      "segment_assigned_count",
 			Help:      "number of segments assigned to be loaded in the cluster",
-			ConstLabels: prometheus.Labels{
-				"coordinator": "segment-assigned-count",
-			},
-		}),
+		}, []string{"tier"}),
 	}
 
 	// register all the prometheus metrics
@@ -248,64 +185,106 @@ func NewCoordinationExporter() *CoordinationExporter {
 }
 
 // SetTierTotalCapacity .
-func (ce *CoordinationExporter) SetTierTotalCapacity(val float64) {}
+func (ce *CoordinationExporter) SetTierTotalCapacity(tier string, val float64) {
+	ce.TierTotalCapacity.With(prometheus.Labels{"tier": tier}).Set(val)
+}
 
 // SetTierRequiredCapacity .
-func (ce *CoordinationExporter) SetTierRequiredCapacity(val float64) {}
+func (ce *CoordinationExporter) SetTierRequiredCapacity(tier string, val float64) {
+	ce.TierRequiredCapacity.With(prometheus.Labels{"tier": tier}).Set(val)
+}
 
 // SetTierReplicationFactor .
-func (ce *CoordinationExporter) SetTierReplicationFactor(val float64) {}
+func (ce *CoordinationExporter) SetTierReplicationFactor(tier string, val float64) {
+	ce.TierReplicationFactor.With(prometheus.Labels{"tier": tier}).Set(val)
+}
 
 // SetTierHistoricalCount .
-func (ce *CoordinationExporter) SetTierHistoricalCount(val float64) {}
+func (ce *CoordinationExporter) SetTierHistoricalCount(tier string, val float64) {
+	ce.TierHistoricalCount.With(prometheus.Labels{"tier": tier}).Set(val)
+}
 
 // SetSegmentUnderReplicatedCount .
-func (ce *CoordinationExporter) SetSegmentUnderReplicatedCount(val float64) {}
+func (ce *CoordinationExporter) SetSegmentUnderReplicatedCount(labels map[string]string, val float64) {
+	ce.SegmentUnderReplicatedCount.With(labels).Add(val)
+}
 
 // SetSegmentUnavailableCount .
-func (ce *CoordinationExporter) SetSegmentUnavailableCount(val float64) {}
+func (ce *CoordinationExporter) SetSegmentUnavailableCount(source string, val float64) {
+	ce.SegmentUnavailableCount.With(prometheus.Labels{"dataSource": source}).Set(val)
+}
 
 // SetSegmentOvershadowedCount .
-func (ce *CoordinationExporter) SetSegmentOvershadowedCount(val float64) {}
+func (ce *CoordinationExporter) SetSegmentOvershadowedCount(val float64) {
+	ce.SegmentOvershadowedCount.WithLabelValues().Add(val)
+}
 
 // SetSegmentCount .
-func (ce *CoordinationExporter) SetSegmentCount(val float64) {}
+func (ce *CoordinationExporter) SetSegmentCount(source string, val float64) {
+	ce.SegmentCount.With(prometheus.Labels{"dataSource": source}).Set(val)
+}
 
 // SetSegmentSize .
-func (ce *CoordinationExporter) SetSegmentSize(val float64) {}
+func (ce *CoordinationExporter) SetSegmentSize(source string, val float64) {
+	ce.SegmentSize.With(prometheus.Labels{"dataSource": source}).Set(val)
+}
 
 // SetSegmentDropQueueCount .
-func (ce *CoordinationExporter) SetSegmentDropQueueCount(val float64) {}
+func (ce *CoordinationExporter) SetSegmentDropQueueCount(server string, val float64) {
+	ce.SegmentDropQueueCount.With(prometheus.Labels{"server": server}).Set(val)
+}
 
 // SetSegmentLoadQueueCount .
-func (ce *CoordinationExporter) SetSegmentLoadQueueCount(val float64) {}
+func (ce *CoordinationExporter) SetSegmentLoadQueueCount(server string, val float64) {
+	ce.SegmentLoadQueueCount.With(prometheus.Labels{"server": server}).Set(val)
+}
 
 // SetSegmentLoadQueueFailed .
-func (ce *CoordinationExporter) SetSegmentLoadQueueFailed(val float64) {}
+func (ce *CoordinationExporter) SetSegmentLoadQueueFailed(server string, val float64) {
+	ce.SegmentLoadQueueFailed.With(prometheus.Labels{"server": server}).Set(val)
+}
 
 // SetSegmentLoadQueueSize .
-func (ce *CoordinationExporter) SetSegmentLoadQueueSize(val float64) {}
+func (ce *CoordinationExporter) SetSegmentLoadQueueSize(server string, val float64) {
+	ce.SegmentLoadQueueSize.With(prometheus.Labels{"server": server}).Set(val)
+}
 
 // SetSegmentCostNormalized .
-func (ce *CoordinationExporter) SetSegmentCostNormalized(val float64) {}
+func (ce *CoordinationExporter) SetSegmentCostNormalized(tier string, val float64) {
+	ce.SegmentCostNormalized.With(prometheus.Labels{"tier": tier}).Set(val)
+}
 
 // SetSegmentCostNormalization .
-func (ce *CoordinationExporter) SetSegmentCostNormalization(val float64) {}
+func (ce *CoordinationExporter) SetSegmentCostNormalization(tier string, val float64) {
+	ce.SegmentCostNormalization.With(prometheus.Labels{"tier": tier}).Set(val)
+}
 
 // SetSegmentCostRaw .
-func (ce *CoordinationExporter) SetSegmentCostRaw(val float64) {}
+func (ce *CoordinationExporter) SetSegmentCostRaw(tier string, val float64) {
+	ce.SegmentCostRaw.With(prometheus.Labels{"tier": tier}).Set(val)
+}
 
 // SetSegmentUnneededCount .
-func (ce *CoordinationExporter) SetSegmentUnneededCount(val float64) {}
+func (ce *CoordinationExporter) SetSegmentUnneededCount(tier string, val float64) {
+	ce.SegmentUnneededCount.With(prometheus.Labels{"tier": tier}).Set(val)
+}
 
 // SetSegmentDeletedCount .
-func (ce *CoordinationExporter) SetSegmentDeletedCount(val float64) {}
+func (ce *CoordinationExporter) SetSegmentDeletedCount(tier string, val float64) {
+	ce.SegmentDeletedCount.With(prometheus.Labels{"tier": tier}).Set(val)
+}
 
 // SetSegmentDroppedCount .
-func (ce *CoordinationExporter) SetSegmentDroppedCount(val float64) {}
+func (ce *CoordinationExporter) SetSegmentDroppedCount(tier string, val float64) {
+	ce.SegmentDroppedCount.With(prometheus.Labels{"tier": tier}).Set(val)
+}
 
 // SetSegmentMovedCount .
-func (ce *CoordinationExporter) SetSegmentMovedCount(val float64) {}
+func (ce *CoordinationExporter) SetSegmentMovedCount(tier string, val float64) {
+	ce.SegmentMovedCount.With(prometheus.Labels{"tier": tier}).Set(val)
+}
 
 // SetSegmentAssignedCount .
-func (ce *CoordinationExporter) SetSegmentAssignedCount(val float64) {}
+func (ce *CoordinationExporter) SetSegmentAssignedCount(tier string, val float64) {
+	ce.SegmentAssignedCount.With(prometheus.Labels{"tier": tier}).Set(val)
+}

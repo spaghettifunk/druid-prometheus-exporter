@@ -14,23 +14,27 @@ func (cf *Coordinator) Evaluate(f Feed) {
 	switch f.Metric {
 	case "tier/total/capacity":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetTierTotalCapacity(float64(val))
+		cf.CoordinationExporter.SetTierTotalCapacity(f.Tier, float64(val))
 		break
 	case "tier/replication/factor":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetTierReplicationFactor(float64(val))
+		cf.CoordinationExporter.SetTierReplicationFactor(f.Tier, float64(val))
 		break
 	case "tier/historical/count":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetTierHistoricalCount(float64(val))
+		cf.CoordinationExporter.SetTierHistoricalCount(f.Tier, float64(val))
 		break
 	case "segment/underReplicated/count":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentUnderReplicatedCount(float64(val))
+		labels := map[string]string{
+			"tier":       f.Tier,
+			"dataSource": f.DataSource,
+		}
+		cf.CoordinationExporter.SetSegmentUnderReplicatedCount(labels, float64(val))
 		break
 	case "segment/unavailable/count":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentUnavailableCount(float64(val))
+		cf.CoordinationExporter.SetSegmentUnavailableCount(f.DataSource, float64(val))
 		break
 	case "segment/overShadowed/count":
 		val, _ := f.Value.(float64)
@@ -38,59 +42,59 @@ func (cf *Coordinator) Evaluate(f Feed) {
 		break
 	case "segment/count":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentCount(float64(val))
+		cf.CoordinationExporter.SetSegmentCount(f.DataSource, float64(val))
 		break
 	case "segment/size":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentSize(float64(val))
+		cf.CoordinationExporter.SetSegmentSize(f.DataSource, float64(val))
 		break
 	case "segment/dropQueue/count":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentDropQueueCount(float64(val))
+		cf.CoordinationExporter.SetSegmentDropQueueCount(f.Server, float64(val))
 		break
 	case "segment/loadQueue/count":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentLoadQueueCount(float64(val))
+		cf.CoordinationExporter.SetSegmentLoadQueueCount(f.Server, float64(val))
 		break
 	case "segment/loadQueue/failed":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentLoadQueueFailed(float64(val))
+		cf.CoordinationExporter.SetSegmentLoadQueueFailed(f.Server, float64(val))
 		break
 	case "segment/loadQueue/size":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentLoadQueueSize(float64(val))
+		cf.CoordinationExporter.SetSegmentLoadQueueSize(f.Server, float64(val))
 		break
 	case "segment/cost/normalized":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentCostNormalized(float64(val))
+		cf.CoordinationExporter.SetSegmentCostNormalized(f.Tier, float64(val))
 		break
 	case "segment/cost/normalization":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentCostNormalization(float64(val))
+		cf.CoordinationExporter.SetSegmentCostNormalization(f.Tier, float64(val))
 		break
 	case "segment/cost/raw":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentCostRaw(float64(val))
+		cf.CoordinationExporter.SetSegmentCostRaw(f.Tier, float64(val))
 		break
 	case "segment/unneeded/count":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentUnneededCount(float64(val))
+		cf.CoordinationExporter.SetSegmentUnneededCount(f.Tier, float64(val))
 		break
 	case "segment/deleted/count":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentDeletedCount(float64(val))
+		cf.CoordinationExporter.SetSegmentDeletedCount(f.Tier, float64(val))
 		break
 	case "segment/dropped/count":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentDroppedCount(float64(val))
+		cf.CoordinationExporter.SetSegmentDroppedCount(f.Tier, float64(val))
 		break
 	case "segment/moved/count":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentMovedCount(float64(val))
+		cf.CoordinationExporter.SetSegmentMovedCount(f.Tier, float64(val))
 		break
 	case "segment/assigned/count":
 		val, _ := f.Value.(float64)
-		cf.CoordinationExporter.SetSegmentAssignedCount(float64(val))
+		cf.CoordinationExporter.SetSegmentAssignedCount(f.Tier, float64(val))
 		break
 	case "jetty/numOpenConnections":
 		val, _ := f.Value.(float64)
