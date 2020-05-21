@@ -326,23 +326,56 @@ func (hf *Historical) Evaluate(f Feed) {
 		break
 	case "sys/disk/write/count":
 		val, _ := f.Value.(float64)
-		hf.SysExporter.SetDiskWriteCount(float64(val))
+		labels := map[string]string{
+			"fsDevName":     f.FSDevName,
+			"fsDirName":     f.FSDirName,
+			"fsTypeName":    f.FSTypeName,
+			"fsSysTypeName": f.FSSysTypeName,
+			"fsOptions":     strings.Join(f.FSOptions, ","),
+		}
+		hf.SysExporter.SetDiskWriteCount(labels, float64(val))
 		break
 	case "sys/disk/read/count":
 		val, _ := f.Value.(float64)
-		hf.SysExporter.SetDiskReadCount(float64(val))
+		labels := map[string]string{
+			"fsDevName":     f.FSDevName,
+			"fsDirName":     f.FSDirName,
+			"fsTypeName":    f.FSTypeName,
+			"fsSysTypeName": f.FSSysTypeName,
+			"fsOptions":     strings.Join(f.FSOptions, ","),
+		}
+		hf.SysExporter.SetDiskReadCount(labels, float64(val))
 		break
 	case "sys/disk/write/size":
 		val, _ := f.Value.(float64)
-		hf.SysExporter.SetDiskWriteSize(float64(val))
+		labels := map[string]string{
+			"fsDevName":     f.FSDevName,
+			"fsDirName":     f.FSDirName,
+			"fsTypeName":    f.FSTypeName,
+			"fsSysTypeName": f.FSSysTypeName,
+			"fsOptions":     strings.Join(f.FSOptions, ","),
+		}
+		hf.SysExporter.SetDiskWriteSize(labels, float64(val))
 		break
 	case "sys/disk/read/size":
 		val, _ := f.Value.(float64)
-		hf.SysExporter.SetDiskReadSize(float64(val))
+		labels := map[string]string{
+			"fsDevName":     f.FSDevName,
+			"fsDirName":     f.FSDirName,
+			"fsTypeName":    f.FSTypeName,
+			"fsSysTypeName": f.FSSysTypeName,
+			"fsOptions":     strings.Join(f.FSOptions, ","),
+		}
+		hf.SysExporter.SetDiskReadSize(labels, float64(val))
 		break
-	case "sys/net/read/size	":
+	case "sys/net/read/size":
 		val, _ := f.Value.(float64)
-		hf.SysExporter.SetNetReadSize(float64(val))
+		labels := map[string]string{
+			"netName":    f.NetName,
+			"netAddress": f.NetAddress,
+			"netHwaddr":  f.NetHwAddr,
+		}
+		hf.SysExporter.SetNetReadSize(labels, float64(val))
 		break
 	case "sys/mem/max":
 		val, _ := f.Value.(float64)
@@ -354,27 +387,46 @@ func (hf *Historical) Evaluate(f Feed) {
 		break
 	case "sys/fs/max":
 		val, _ := f.Value.(float64)
-		hf.SysExporter.SetFSMax(float64(val))
+		labels := map[string]string{
+			"fsDevName":     f.FSDevName,
+			"fsDirName":     f.FSDirName,
+			"fsTypeName":    f.FSTypeName,
+			"fsSysTypeName": f.FSSysTypeName,
+			"fsOptions":     strings.Join(f.FSOptions, ","),
+		}
+		hf.SysExporter.SetFSMax(labels, float64(val))
 		break
 	case "sys/fs/used":
 		val, _ := f.Value.(float64)
-		hf.SysExporter.SetFSUsed(float64(val))
+		labels := map[string]string{
+			"fsDevName":     f.FSDevName,
+			"fsDirName":     f.FSDirName,
+			"fsTypeName":    f.FSTypeName,
+			"fsSysTypeName": f.FSSysTypeName,
+			"fsOptions":     strings.Join(f.FSOptions, ","),
+		}
+		hf.SysExporter.SetFSUsed(labels, float64(val))
 		break
 	case "sys/net/write/size":
 		val, _ := f.Value.(float64)
-		hf.SysExporter.SetNetWriteSize(float64(val))
-		break
-	case "sys/net/read/size":
-		val, _ := f.Value.(float64)
-		hf.SysExporter.SetNetReadSize(float64(val))
+		labels := map[string]string{
+			"netName":    f.NetName,
+			"netAddress": f.NetAddress,
+			"netHwaddr":  f.NetHwAddr,
+		}
+		hf.SysExporter.SetNetWriteSize(labels, float64(val))
 		break
 	case "sys/storage/used":
 		val, _ := f.Value.(float64)
-		hf.SysExporter.SetStorageUsed(float64(val))
+		hf.SysExporter.SetStorageUsed(f.FSDirName, float64(val))
 		break
 	case "sys/cpu":
 		val, _ := f.Value.(float64)
-		hf.SysExporter.SetCPU(float64(val))
+		labels := map[string]string{
+			"cpuName": f.CPUName,
+			"cpuTime": f.CPUTime,
+		}
+		hf.SysExporter.SetCPU(labels, float64(val))
 		break
 	case "segment/max":
 		val, _ := f.Value.(float64)

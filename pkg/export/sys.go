@@ -4,171 +4,123 @@ import "github.com/prometheus/client_golang/prometheus"
 
 // SysExporter contains all the Prometheus metrics that are possible to gather from the Jetty service
 type SysExporter struct {
-	SwapFree       prometheus.Counter `description:"free swap"`
-	SwapMax        prometheus.Counter `description:"max swap"`
-	SwapPageIn     prometheus.Counter `description:"paged in swap"`
-	SwapPageOut    prometheus.Counter `description:"paged out swap"`
-	DiskWriteCount prometheus.Counter `description:"writes to disk"`
-	DiskReadCount  prometheus.Counter `description:"reads from disk"`
-	DiskWriteSize  prometheus.Counter `description:"bytes written to disk. It can be used to determine how much paging is occurring with regards to segments"`
-	DiskReadSize   prometheus.Counter `description:"bytes read from disk. It can be used to determine how much paging is occurring with regards to segments"`
-	NetWriteSize   prometheus.Counter `description:"bytes written to the network"`
-	NetReadSize    prometheus.Counter `description:"bytes read from the network"`
-	FSUsed         prometheus.Counter `description:"filesystem bytes used"`
-	FSMax          prometheus.Counter `description:"filesystesm bytes max"`
-	MemUsed        prometheus.Counter `description:"memory used"`
-	MemMax         prometheus.Counter `description:"memory max"`
-	StorageUsed    prometheus.Counter `description:"disk space used"`
-	CPU            prometheus.Counter `description:"cpu used"`
+	SwapFree       *prometheus.GaugeVec `description:"free swap"`
+	SwapMax        *prometheus.GaugeVec `description:"max swap"`
+	SwapPageIn     *prometheus.GaugeVec `description:"paged in swap"`
+	SwapPageOut    *prometheus.GaugeVec `description:"paged out swap"`
+	DiskWriteCount *prometheus.GaugeVec `description:"writes to disk"`
+	DiskReadCount  *prometheus.GaugeVec `description:"reads from disk"`
+	DiskWriteSize  *prometheus.GaugeVec `description:"bytes written to disk. It can be used to determine how much paging is occurring with regards to segments"`
+	DiskReadSize   *prometheus.GaugeVec `description:"bytes read from disk. It can be used to determine how much paging is occurring with regards to segments"`
+	NetWriteSize   *prometheus.GaugeVec `description:"bytes written to the network"`
+	NetReadSize    *prometheus.GaugeVec `description:"bytes read from the network"`
+	FSUsed         *prometheus.GaugeVec `description:"filesystem bytes used"`
+	FSMax          *prometheus.GaugeVec `description:"filesystesm bytes max"`
+	MemUsed        *prometheus.GaugeVec `description:"memory used"`
+	MemMax         *prometheus.GaugeVec `description:"memory max"`
+	StorageUsed    *prometheus.GaugeVec `description:"disk space used"`
+	CPU            *prometheus.GaugeVec `description:"cpu used"`
 }
 
 // NewSysExporter returns a new Jetty exporter object
 func NewSysExporter() *SysExporter {
 	se := &SysExporter{
-		SwapFree: prometheus.NewCounter(prometheus.CounterOpts{
+		SwapFree: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "swap_free",
-			Help:      "free swap",
-			ConstLabels: prometheus.Labels{
-				"sys": "swap-free",
-			},
-		}),
-		SwapMax: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{}),
+		SwapMax: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "swap_max",
-			Help:      "max swap",
-			ConstLabels: prometheus.Labels{
-				"sys": "swap-max",
-			},
-		}),
-		SwapPageIn: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{}),
+		SwapPageIn: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "swap_pagein",
-			Help:      "paged in swap",
-			ConstLabels: prometheus.Labels{
-				"sys": "swap-pagein",
-			},
-		}),
-		SwapPageOut: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{}),
+		SwapPageOut: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "swap_pageout",
-			Help:      "paged out swap",
-			ConstLabels: prometheus.Labels{
-				"sys": "swap-pageout",
-			},
-		}),
-		DiskWriteCount: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{}),
+		DiskWriteCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "disk_write_count",
-			Help:      "writes to disk",
-			ConstLabels: prometheus.Labels{
-				"sys": "disk-write-count",
-			},
-		}),
-		DiskReadCount: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{"fsDevName", "fsDirName", "fsTypeName", "fsSysTypeName", "fsOptions"}),
+		DiskReadCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "disk_read_count",
-			Help:      "reads from disk",
-			ConstLabels: prometheus.Labels{
-				"sys": "disk-read-count",
-			},
-		}),
-		DiskWriteSize: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{"fsDevName", "fsDirName", "fsTypeName", "fsSysTypeName", "fsOptions"}),
+		DiskWriteSize: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "disk_write_size",
-			Help:      "bytes written to disk. It can be used to determine how much paging is occurring with regards to segments",
-			ConstLabels: prometheus.Labels{
-				"sys": "disk-write-size",
-			},
-		}),
-		DiskReadSize: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{"fsDevName", "fsDirName", "fsTypeName", "fsSysTypeName", "fsOptions"}),
+		DiskReadSize: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "disk_read_size",
-			Help:      "bytes read from disk. It can be used to determine how much paging is occurring with regards to segments",
-			ConstLabels: prometheus.Labels{
-				"sys": "disk-read-size",
-			},
-		}),
-		NetWriteSize: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{"fsDevName", "fsDirName", "fsTypeName", "fsSysTypeName", "fsOptions"}),
+		NetWriteSize: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "net_write_size",
-			Help:      "bytes written to the network",
-			ConstLabels: prometheus.Labels{
-				"sys": "net-write-size",
-			},
-		}),
-		NetReadSize: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{"netName", "netAddress", "netHwaddr"}),
+		NetReadSize: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "net_read_size",
-			Help:      "bytes read from the network",
-			ConstLabels: prometheus.Labels{
-				"sys": "net-read-size",
-			},
-		}),
-		FSUsed: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{"netName", "netAddress", "netHwaddr"}),
+		FSUsed: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "fs_used",
-			Help:      "filesystem bytes used",
-			ConstLabels: prometheus.Labels{
-				"sys": "fs-used",
-			},
-		}),
-		FSMax: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{"fsDevName", "fsDirName", "fsTypeName", "fsSysTypeName", "fsOptions"}),
+		FSMax: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "fs_max",
-			Help:      "filesystesm bytes max",
-			ConstLabels: prometheus.Labels{
-				"sys": "fs-max",
-			},
-		}),
-		MemUsed: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{"fsDevName", "fsDirName", "fsTypeName", "fsSysTypeName", "fsOptions"}),
+		MemUsed: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "mem_used",
-			Help:      "memory used",
-			ConstLabels: prometheus.Labels{
-				"sys": "mem-used",
-			},
-		}),
-		MemMax: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{}),
+		MemMax: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "mem_max",
-			Help:      "memory max",
-			ConstLabels: prometheus.Labels{
-				"sys": "mem-max",
-			},
-		}),
-		StorageUsed: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{}),
+		StorageUsed: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "storage_used",
-			Help:      "disk space used",
-			ConstLabels: prometheus.Labels{
-				"sys": "storage-used",
-			},
-		}),
-		CPU: prometheus.NewCounter(prometheus.CounterOpts{
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{"fsDirName"}),
+		CPU: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
-			Subsystem: "sys",
-			Name:      "cpu",
-			Help:      "cpu used",
-			ConstLabels: prometheus.Labels{
-				"sys": "cpu",
-			},
-		}),
+			Subsystem: "broker",
+			Name:      "query_failed_count",
+			Help:      "number of failed queries",
+		}, []string{"cpuName", "cpuTime"}),
 	}
 
 	// register all the prometheus metrics
@@ -194,64 +146,80 @@ func NewSysExporter() *SysExporter {
 
 // SetSwapFree .
 func (se *SysExporter) SetSwapFree(val float64) {
+	se.SwapFree.WithLabelValues().Add(val)
 }
 
 // SetSwapMax .
 func (se *SysExporter) SetSwapMax(val float64) {
+	se.SwapMax.WithLabelValues().Add(val)
 }
 
 // SetSwapPageIn .
 func (se *SysExporter) SetSwapPageIn(val float64) {
+	se.SwapPageIn.WithLabelValues().Add(val)
 }
 
 // SetSwapPageOut .
 func (se *SysExporter) SetSwapPageOut(val float64) {
+	se.SwapPageOut.WithLabelValues().Add(val)
 }
 
 // SetDiskWriteCount .
-func (se *SysExporter) SetDiskWriteCount(val float64) {
+func (se *SysExporter) SetDiskWriteCount(labels map[string]string, val float64) {
+	se.DiskWriteCount.With(labels).Add(val)
 }
 
 // SetDiskReadCount .
-func (se *SysExporter) SetDiskReadCount(val float64) {
+func (se *SysExporter) SetDiskReadCount(labels map[string]string, val float64) {
+	se.DiskReadCount.With(labels).Add(val)
 }
 
 // SetDiskWriteSize .
-func (se *SysExporter) SetDiskWriteSize(val float64) {
+func (se *SysExporter) SetDiskWriteSize(labels map[string]string, val float64) {
+	se.DiskWriteSize.With(labels).Add(val)
 }
 
 // SetDiskReadSize .
-func (se *SysExporter) SetDiskReadSize(val float64) {
+func (se *SysExporter) SetDiskReadSize(labels map[string]string, val float64) {
+	se.DiskReadSize.With(labels).Add(val)
 }
 
 // SetNetWriteSize .
-func (se *SysExporter) SetNetWriteSize(val float64) {
+func (se *SysExporter) SetNetWriteSize(labels map[string]string, val float64) {
+	se.NetWriteSize.With(labels).Add(val)
 }
 
 // SetNetReadSize .
-func (se *SysExporter) SetNetReadSize(val float64) {
+func (se *SysExporter) SetNetReadSize(labels map[string]string, val float64) {
+	se.NetReadSize.With(labels).Add(val)
 }
 
 // SetFSUsed .
-func (se *SysExporter) SetFSUsed(val float64) {
+func (se *SysExporter) SetFSUsed(labels map[string]string, val float64) {
+	se.FSUsed.With(labels).Add(val)
 }
 
 // SetFSMax .
-func (se *SysExporter) SetFSMax(val float64) {
+func (se *SysExporter) SetFSMax(labels map[string]string, val float64) {
+	se.FSMax.With(labels).Add(val)
 }
 
 // SetMemUsed .
 func (se *SysExporter) SetMemUsed(val float64) {
+	se.MemUsed.WithLabelValues().Add(val)
 }
 
 // SetMemMax .
 func (se *SysExporter) SetMemMax(val float64) {
+	se.MemMax.WithLabelValues().Add(val)
 }
 
 // SetStorageUsed .
-func (se *SysExporter) SetStorageUsed(val float64) {
+func (se *SysExporter) SetStorageUsed(fsDirName string, val float64) {
+	se.StorageUsed.With(prometheus.Labels{"fsDirName": fsDirName}).Add(val)
 }
 
 // SetCPU .
-func (se *SysExporter) SetCPU(val float64) {
+func (se *SysExporter) SetCPU(labels map[string]string, val float64) {
+	se.CPU.With(labels).Add(val)
 }
