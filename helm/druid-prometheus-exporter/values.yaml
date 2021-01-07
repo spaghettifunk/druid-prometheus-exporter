@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: docker.pkg.github.com/spaghettifunk/druid-prometheus-exporter/druid-prometheus-exporter
+  repository: davideberdin/druid-prometheus-exporter
   pullPolicy: IfNotPresent
   tag: latest
 
