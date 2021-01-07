@@ -52,7 +52,7 @@ func startServer(addr, port string) error {
 	}
 
 	// collect endpoint for receiving the metrics from Druid
-	r.GET("/heathz", collect.Healthz)
+	r.GET("/healthz", collect.Healthz)
 	r.POST("/collect", collect.DruidCollectMetrics)
 
 	return r.Run(fmt.Sprintf("%s:%s", addr, port))
