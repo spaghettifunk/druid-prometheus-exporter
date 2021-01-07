@@ -46,11 +46,6 @@ spec:
             httpGet:
               path: /healthz
               port: http
-          env:
-            - name: EXPORTER_SERVER_HOST
-              value: ""
-            - name: EXPORTER_SERVER_PORT
-              value: "{{ .Values.service.port }}"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

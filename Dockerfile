@@ -24,4 +24,6 @@ RUN apk update && \
 
 WORKDIR /app
 
+EXPOSE 7000
+
 ENTRYPOINT ["/app/bin/server"]
