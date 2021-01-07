@@ -1,0 +1,6 @@
+apiVersion: v2
+name: druid-prometheus-exporter
+description: Exporting Druid metrics to prometheus by exposing them on a specific endpoint
+type: application
+version: 0.1.0
+appVersion: 0.1.0
