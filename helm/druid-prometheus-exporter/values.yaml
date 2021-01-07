@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: davideberdin/druid-prometheus-exporter
   pullPolicy: IfNotPresent
-  tag: latest
+  tag: 0.1.1
 
 imagePullSecrets: []
 nameOverride: ""
@@ -22,14 +22,6 @@ podAnnotations: {}
 
 podSecurityContext: {}
   # fsGroup: 2000
-
-securityContext: {}
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
 
 service:
   type: ClusterIP

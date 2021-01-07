@@ -1,8 +1,6 @@
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/gin-gonic/gin"
 	"github.com/rs/zerolog"
 	"github.com/spaghettifunk/druid-prometheus-exporter/collect"
@@ -14,7 +12,6 @@ import (
 
 const (
 	serverHostFlag = "server-host"
-	serverPortFlag = "server-port"
 )
 
 // serverCmd represents the internal command
@@ -25,7 +22,6 @@ var serverCmd = &cobra.Command{
 metrics from Apche Druid and convert them into the Prometheus format.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		serverHost := viper.GetString(serverHostFlag)
-		serverPort := viper.GetString(serverPortFlag)
 		logDebug := viper.GetBool(logDebugFlag)
 
 		// log level debug
@@ -34,14 +30,16 @@ metrics from Apche Druid and convert them into the Prometheus format.`,
 			zerolog.SetGlobalLevel(zerolog.DebugLevel)
 		}
 
-		if err := startServer(serverHost, serverPort); err != nil {
+		if err := startServer(serverHost); err != nil {
 			panic(err)
 		}
 	},
 }
 
-func startServer(addr, port string) error {
+func startServer(addr string) error {
 	r := gin.Default()
+	r.RedirectTrailingSlash = true
+
 	// prometheus middleware
 	p := ginprometheus.NewPrometheus("gin")
 	p.Use(r)
@@ -52,10 +50,10 @@ func startServer(addr, port string) error {
 	}
 
 	// collect endpoint for receiving the metrics from Druid
-	r.GET("/", collect.Healthz)
+	r.GET("/healthz", collect.Healthz)
 	r.POST("/collect", collect.DruidCollectMetrics)
 
-	return r.Run(fmt.Sprintf("%s:%s", addr, port))
+	return r.Run(addr)
 }
 
 func initMetrics() []gin.HandlerFunc {
@@ -73,11 +71,9 @@ func init() {
 
 	f := serverCmd.PersistentFlags()
 
-	f.String(serverHostFlag, "localhost", "exporter server host")
-	f.String(serverPortFlag, "7000", "exporter server port")
+	f.String(serverHostFlag, ":7000", "exporter server host")
 
 	viper.BindEnv(serverHostFlag, "EXPORTER_SERVER_HOST")
-	viper.BindEnv(serverHostFlag, "EXPORTER_SERVER_PORT")
 
 	viper.BindPFlags(f)
 }

@@ -4,11 +4,16 @@ metadata:
   name: {{ include "druid-prometheus-exporter.fullname" . }}
   labels:
     {{- include "druid-prometheus-exporter.labels" . | nindent 4 }}
+  annotations:
+    prometheus.io/path: "/metrics"
+    prometheus.io/scheme: http
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "7000"    
 spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: {{ .Values.service.port }}
       protocol: TCP
       name: http
   selector:
