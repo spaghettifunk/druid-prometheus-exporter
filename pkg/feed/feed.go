@@ -40,7 +40,6 @@ type Feed struct {
 	Type              string      `json:"type"`
 	HasFilters        string      `json:"hasFilters"`
 	Duration          string      `json:"duration"`
-	Context           string      `json:"context"`
 	NumComplexMetrics string      `json:"numComplexMetrics"`
 	NumDimensions     string      `json:"numDimensions"`
 	Threshold         string      `json:"threshold"`
