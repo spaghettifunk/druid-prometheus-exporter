@@ -38,10 +38,8 @@ type Feed struct {
 	Tier              string      `json:"tier"`
 	Server            string      `json:"server"`
 	Type              string      `json:"type"`
-	Interval          string      `json:"interval"`
 	HasFilters        string      `json:"hasFilters"`
 	Duration          string      `json:"duration"`
-	Context           string      `json:"context"`
 	NumComplexMetrics string      `json:"numComplexMetrics"`
 	NumDimensions     string      `json:"numDimensions"`
 	Threshold         string      `json:"threshold"`

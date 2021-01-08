@@ -27,7 +27,7 @@ services:
       - ZOO_MY_ID=1
 
   coordinator:
-    image: apache/druid:0.18.0
+    image: apache/druid:0.20.0
     container_name: coordinator
     volumes:
       - ./storage:/opt/data
@@ -43,7 +43,7 @@ services:
       - ./config/common
 
   broker:
-    image: apache/druid:0.18.0
+    image: apache/druid:0.20.0
     container_name: broker
     volumes:
       - broker_var:/opt/druid/var
@@ -60,7 +60,7 @@ services:
       - ./config/brokers
 
   historical:
-    image: apache/druid:0.18.0
+    image: apache/druid:0.20.0
     container_name: historical
     volumes:
       - ./storage:/opt/data
@@ -78,7 +78,7 @@ services:
       - ./config/historical
 
   middlemanager:
-    image: apache/druid:0.18.0
+    image: apache/druid:0.20.0
     container_name: middlemanager
     volumes:
       - ./storage:/opt/data
@@ -95,7 +95,7 @@ services:
       - ./config/common
 
   router:
-    image: apache/druid:0.18.0
+    image: apache/druid:0.20.0
     container_name: router
     volumes:
       - router_var:/opt/druid/var

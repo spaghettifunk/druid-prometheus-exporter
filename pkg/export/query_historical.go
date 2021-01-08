@@ -25,7 +25,7 @@ func NewQueryHistoricalExporter() *QueryHistoricalExporter {
 			Name:      "query_time",
 			Help:      "milliseconds taken to complete a query",
 			Buckets:   []float64{10, 100, 500, 1000, 2000, 3000, 5000, 7000, 10000},
-		}, []string{"dataSource", "type", "interval", "hasFilters", "duration", "context", "remoteAddress", "id", "numMetrics", "numComplexMetrics", "numDimensions", "threshold", "dimension"}),
+		}, []string{"dataSource", "type", "hasFilters", "duration", "remoteAddress", "id", "numMetrics", "numComplexMetrics", "numDimensions", "threshold", "dimension"}),
 		QuerySegmentTime: prometheus.NewHistogramVec(prometheus.HistogramOpts{
 			Namespace: "druid",
 			Subsystem: "historical",
@@ -53,7 +53,7 @@ func NewQueryHistoricalExporter() *QueryHistoricalExporter {
 			Name:      "query_cpu_time",
 			Help:      "Microseconds of CPU time taken to complete a query",
 			Buckets:   []float64{10, 100, 500, 1000, 2000, 3000, 5000, 7000, 10000},
-		}, []string{"dataSource", "type", "interval", "hasFilters", "duration", "context", "remoteAddress", "id", "numMetrics", "numComplexMetrics", "numDimensions", "threshold", "dimension"}),
+		}, []string{"dataSource", "type", "hasFilters", "duration", "remoteAddress", "id", "numMetrics", "numComplexMetrics", "numDimensions", "threshold", "dimension"}),
 		QueryCount: prometheus.NewGaugeVec(prometheus.GaugeOpts{
 			Namespace: "druid",
 			Subsystem: "historical",
