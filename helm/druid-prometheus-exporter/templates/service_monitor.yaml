@@ -1,0 +1,20 @@
+{{ if .Values.monitoring.enabled }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    app: druid-prometheus-exporter
+    release: prometheus-stack
+  name: druid-prometheus-exporter
+  namespace: {{ .Values.monitoring.namespace }}
+spec:
+  endpoints:
+    - targetPort: {{ .Values.service.port }}
+      interval: 30s
+      path: /metrics
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: druid-prometheus-exporter
+  namespaceSelector:
+    any: true
+{{ end }}    

@@ -27,6 +27,10 @@ service:
   type: ClusterIP
   port: 7000
 
+monitoring:
+  enabled: false
+  namespace: monitoring
+
 resources: {}
   # limits:
   #   cpu: 100m
