@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: davideberdin/druid-prometheus-exporter
   pullPolicy: IfNotPresent
-  tag: 0.1.1
+  tag: latest
 
 imagePullSecrets: []
 nameOverride: ""
